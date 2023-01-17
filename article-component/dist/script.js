@@ -1,2 +1,2 @@
-"use strict";
+"use strict";var share=document.querySelector(body),footer=document.querySelector(".article__footer"),focus=document.querySelector(".article__share");console.log("elo"),share.addEventListener("click",(function(e){console.log("click"),footer.classList.remove(".visible"),focus.classList.add(".hidden")}));
 //# sourceMappingURL=script.js.map
