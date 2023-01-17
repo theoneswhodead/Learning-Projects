@@ -1,0 +1,128 @@
+@use '../utils/' as *;
+
+.wraper {
+
+}
+.tech {
+    &__grid {
+        display: grid;
+        grid-template-columns: rem(310) ;
+        justify-content: center;
+        align-content: center;
+        @include breakpoint(medium) {
+            grid-template-columns: rem(310) rem(310);
+            gap: 29px;
+        }
+
+        @include breakpoint(large) {
+            grid-template-columns: rem(352) rem(352);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 30px;
+        }
+    }
+
+    &__header {
+        text-align: center;
+        @include breakpoint(medium) {
+            grid-column:  span 2;
+        }
+        @include breakpoint(large) {
+            grid-column: span 3;
+        }
+    }
+
+    &__headline {
+        font-weight: lighter;
+        font-size: rem(18);
+        color: var(--Dark-Blue);
+        @include breakpoint(large) {
+            font-size: rem(30);
+        }
+        &-text {
+            font-size: rem(14);
+            color: var(--Grayish-Blue);
+            @include breakpoint(large) {
+                font-size: rem(20);
+            }
+        }
+    }
+
+    &__card{
+        position: relative;
+        min-width: rem(310);
+        min-height: rem(220);
+        border-top: 3px solid;
+        border-radius: 5px;
+        box-shadow: 10px 10px 10px rgba(84, 158, 242, 0.25);;
+        padding: 35px 29px 29px 30px;
+        margin-bottom: rem(25);
+        @include breakpoint(large) {
+            max-height: rem(252);
+            max-width: rem(352);
+        }
+
+        h1 {
+            font-size: rem(17);
+        }
+        p {
+            font-size: rem(11);
+            color: var(--Grayish-Blue);
+        }
+
+        img {
+            // display: block;
+            position: absolute;
+            width: rem(59);
+            height: rem(59);
+            right: 0;
+            bottom: 0;
+            translate: -40% -40%;
+            @include breakpoint(large) {
+                width: rem(66);
+                height: rem(66);
+            }
+        }
+        &:hover {
+            cursor: pointer;
+            translate: 0 -20%;
+            opacity: 0.9;
+            transition: translate 250ms ease-in-out;
+        }
+    }
+}
+.bold {
+    font-weight: 600;
+}
+
+.supervisor
+{
+    border-top: 4px solid var(--Cyan);
+    @include breakpoint(large) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 5;
+    }
+}
+
+.team {
+    border-top: 4px solid var(--Red);
+    @include breakpoint(large) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 4;
+    }
+}
+
+.karma {
+    border-top: 4px solid var(--Orange);
+    @include breakpoint(large) {
+        grid-column: 2 / 3;
+        grid-row: 4 / 6;
+    }
+}
+
+.calculator {
+    border-top: 4px solid var(--Blue);
+    @include breakpoint(large) {
+        grid-column: 3 / 4;
+        grid-row: 3 / 5;
+    }
+}
