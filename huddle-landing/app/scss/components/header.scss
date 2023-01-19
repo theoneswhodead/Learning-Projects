@@ -1,0 +1,10 @@
+@use '../util/' as *;
+
+.header {
+    &__image {
+
+        margin-top: rem(75);
+        margin-left: rem(80);
+        margin-bottom: rem(140);
+    }
+}

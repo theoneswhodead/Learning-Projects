@@ -1,0 +1,9 @@
+@use '../util/' as *;
+
+.main {
+    &__image {
+        width: rem(594);
+        height: rem(420);
+        margin: 0 rem(74) 0 rem(80);
+    }
+}
