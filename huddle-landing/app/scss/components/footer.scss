@@ -1,0 +1,24 @@
+@use '../util/' as *;
+
+.footer {
+    @include breakpoint(large) {
+        grid-column: span 2;
+        justify-self: end;
+        margin-bottom: 50px;
+        margin-right: 50px;
+    
+        }
+    &__icons {
+        color: #fff;
+        text-align: center;
+        i {
+           font-size: rem(58);
+           margin: 0 rem(11);
+           &:hover {
+            cursor: pointer;
+            color: var(--Soft-Magenta);
+        }
+        }
+
+    }
+}

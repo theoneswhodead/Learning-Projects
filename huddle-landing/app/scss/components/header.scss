@@ -1,10 +1,21 @@
 @use '../util/' as *;
 
 .header {
+    @include breakpoint(large) {
+
+        grid-column: span 2;
+    }
     &__image {
 
         margin-top: rem(75);
         margin-left: rem(80);
         margin-bottom: rem(140);
+
+        @include breakpoint(large) {
+            margin-top: rem(64);
+            margin-left: rem(80);
+            margin-bottom: rem(105);
+
+        }
     }
 }

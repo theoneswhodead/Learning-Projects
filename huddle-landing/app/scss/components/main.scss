@@ -4,6 +4,13 @@
     &__image {
         width: rem(594);
         height: rem(420);
-        margin: 0 rem(74) 0 rem(80);
+        margin: 0 rem(74) rem(150) rem(80);
+
+        @include breakpoint(large) {
+            width: rem(698);
+            height: rem(496);
+            margin: 0 rem(74) rem(150) rem(80);
+            grid-column: 1/2;
+        }
     }
 }

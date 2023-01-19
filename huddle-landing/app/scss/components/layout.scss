@@ -1,0 +1,11 @@
+@use '../util/' as *;
+.wrapper {
+    display:grid;
+    grid-template-columns: 1fr;
+    @include breakpoint(large) {
+
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+
+    }
+}

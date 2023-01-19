@@ -1,5 +1,9 @@
+@use '../util/' as *;
 body {
     background-image: url('/images/bg-mobile.svg');
     background-size: cover;
     background-color: var( --Violet);
+    @include breakpoint(large) {
+        background-image: url('/images/bg-desktop.svg');
+    }
 }
