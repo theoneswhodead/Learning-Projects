@@ -148,13 +148,21 @@ img {
 
 /*Tab content*/
 
-.tab__content {
+.tab-content {
     padding: 3rem 0;
     background: #000;
     color: #fff;
 }
+/*hide content*/
+#tab-1-content, #tab-2-content, #tab-3-content {
+    display: none;
+}
 
-#tab-1__content .tabt-1__content-inner {
+.show {
+    display: block !important;
+}
+
+#tab-1-content .tabt-1-content-inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
@@ -205,6 +213,32 @@ img {
 .table tbody tr:nth-child(odd) {
     background: #222;
 }
+/*Footer*/
+.footer {
+    max-width: 75%;
+    margin: 1rem auto;
+    overflow: auto;
+}
+
+.footer, .footer a {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols {
+    display:  grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.footer li {
+    line-height: 1.9;
+}
+
 /*Container*/
 
 .container {
@@ -274,4 +308,73 @@ img {
     font-size: 1rem;
     padding: 0.8rem 1.3rem;
     text-transform: uppercase;
+}
+.btn-icon {
+    margin-left: 1rem;
+}
+@media (max-width: 960px) {
+    .showcase {
+        height: 70vh;
+    }
+
+    .hide-sm {
+        display: none;
+    }
+
+    .showcase__top img {
+        top: 30%;
+        left: 5%;
+        transform: translate(0);
+    }
+
+    .showcase__content h1 {
+        font-size: 3.7rem;
+        line-height: 1;
+    }
+
+    .showcase__content p {
+        font-size: 1.5rem;
+    }
+
+    .footer .footer-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn-xl {
+        font-size: 1.5rem;
+        padding: 1.4rem 2rem;
+    }
+
+    .text-xl {
+        font-size: 1.5rem;
+    }
+    .text-lg {
+        font-size: 1.3rem;
+    }
+    .text-md {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .showcase::after  {
+        background: rgba(0,0,0,0.6);
+        box-shadow: inset 80px 80px 250px #000000,
+        inset -80px -80px 250px #000000;
+    }
+    #tab-1-content {
+        grid-template-columns: 1fe;
+        text-align: center;
+    }
+
+    #tab-2-content .tab-2-content-top {
+        display: block;
+        text-align: center;
+    }
+    #tab-2-content .tab-2-content-bottom { 
+        grid-template-columns: 1fr;
+ 
+    }
 }
