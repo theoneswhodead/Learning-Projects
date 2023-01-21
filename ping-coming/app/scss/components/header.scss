@@ -1,0 +1,34 @@
+@use '../util/' as *;
+.header {
+    text-align: center;
+    &__image {
+        display: flex;
+        justify-content: center; /* align horizontal */
+        align-items: center; /* align vertical */
+        margin-top: rem(85);
+        margin-bottom: rem(45);
+        img {
+            height: rem(17);
+            width: rem(56);
+        }
+    }
+
+    &__headline {
+        font-size: rem(18);
+        color: var(--Gray);
+        letter-spacing: 1px;
+        font-weight: 300;
+
+
+        &-bold {
+            font-weight: 700;
+            color: var(--Dark-Blue);
+        }
+    }
+
+    &__text {
+        color: var(--Dark-Blue);
+        font-size: rem(11);
+        margin-top: rem(25);
+    }
+}

@@ -1,0 +1,34 @@
+@use '../util/' as *;
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &__email {
+        
+ 
+        border: 1px solid var(--Pale-Blue);
+        width: rem(283);
+        height: rem(42);
+        border-radius: rem(25);
+        margin-bottom: rem(10);
+        margin-top: rem(32);
+
+        &::placeholder {
+            font-size: rem(11);
+            color: var(--Pale-Blue);
+            padding-left: 33px;
+        }
+    }
+
+    &__btn {
+        width: rem(283);
+        height: rem(42);
+        background: var(--Blue);
+        border-radius: rem(25);
+        color: #fff;
+        border: none;
+    }
+}
