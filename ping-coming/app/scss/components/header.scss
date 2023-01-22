@@ -10,11 +10,16 @@
         img {
             height: rem(17);
             width: rem(56);
+            @include breakpoint(large) {
+                height: rem(26);
+                width: rem(88);  
+            }
         }
     }
 
     &__headline {
-        font-size: rem(18);
+        font-size: 1.125rem;
+        font-size: clamp(1.125rem, 0.7236238532110091rem + 1.834862385321101vw, 2.375rem);
         color: var(--Gray);
         letter-spacing: 1px;
         font-weight: 300;
@@ -28,7 +33,8 @@
 
     &__text {
         color: var(--Dark-Blue);
-        font-size: rem(11);
+        font-size: 0.6875rem;
+        font-size: clamp(0.6875rem, 0.5670871559633027rem + 0.5504587155963303vw, 1.0625rem);
         margin-top: rem(25);
     }
 }

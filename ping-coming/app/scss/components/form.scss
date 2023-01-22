@@ -32,6 +32,11 @@
     &__email {
         margin-bottom: rem(10); // in desctop -> margin-right;
         position: relative;
+
+        @include breakpoint(medium) {
+            margin-right: rem(10);
+            margin-bottom: 0;
+        }
         input {
 
             border: 1px solid var(--Pale-Blue);
@@ -58,30 +63,14 @@
                 padding-left: 33px;
             }
         }
-
-
-
-        // &:focus-visible:invalid ~ .form__email-invalid {
-        //     display: inline-block;
-        //     position: absolute;
-        //     bottom: 0;
-        //      left: 0;
-    
-        // }
-        // &:focus-visible:invalid ~ .form__btn {
-        //     margin-top: 30px;
-        // }
-
-
-
-
-
     }
-
-
 }
-
 
 .margin {
     margin-top: rem(25);
+
+    @include breakpoint(medium) {
+    
+        margin-top: 0;
+    }
 }

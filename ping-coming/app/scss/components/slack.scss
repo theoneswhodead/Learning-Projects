@@ -3,12 +3,16 @@
 
 .slack  {
     padding: 0 28px;
-    text-align: center;
     margin-bottom: rem(120);
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
     &__image {
-        // min-width: rem(323);
-        // min-height: rem(194);
+
+        @include breakpoint(medium) {
+            width: rem(642);
+            height: rem(388);
+        }
     }
 }
 
-//323  //194

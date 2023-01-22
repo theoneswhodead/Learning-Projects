@@ -11,7 +11,5 @@ form.addEventListener('focusin', (e) => {
     form.addEventListener('focusout', (e) => {
         btn[0].classList.remove('margin');
     });
-    // form.addEventListener('focus', (e) => {
-    //     btn[0].classList.toggle('margin');
-    // });
+   
 
