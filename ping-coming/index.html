@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,600;0,700;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/dist/style.css">
+  <script src="https://kit.fontawesome.com/12a5271063.js" crossorigin="anonymous"></script>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -28,13 +29,32 @@
       <h1 class="header__headline">We are launching <span class="header__headline-bold">soon!</span></h1>
       <p class="header__text">Subscribe and get notified</p>
     </header>
-    <div class="form">
-      <form action="">
-        <label for="email"></label>
-        <input class="form__email" type="email" name="email" id="" required placeholder="Your email address..">
+    <main >
+      <form class="form" action="">
+        <div class="form__email">
+          <label for="email"></label>
+          <input type="email" name="email" id="" required placeholder="Your email address..">
+          <p class="form__invalid">Please provide a valid email address</p>
+        </div>
 
-        <input class="form__btn" type="button" value="Notify Me">
+        <div class="form__btn">
+          <input type="submit" value="Notify Me">
+        </div>
       </form>
+    </main>
+    <div class="slack">
+      <img src="/images/illustration-dashboard.png" alt="" class="slack__image">
+    </div>
+    <footer class="socials">
+      <div class="socials__icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </footer>
+
+    <div class="copyright">
+      <p>&copy; Copyright Ping. All rights reserved.</p>
     </div>
   </div>
 
@@ -45,9 +65,9 @@
 
 
 
-  Notify Me
 
-  &copy; Copyright Ping. All rights reserved.
+
+
 
   <footer>
     <p class="attribution">
@@ -55,5 +75,6 @@
       Coded by <a href="#">NyMek</a>.
     </p>
   </footer>
+  <script src="/dist/script.js"></script>
 </body>
 </html>

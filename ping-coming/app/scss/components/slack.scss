@@ -1,0 +1,14 @@
+@use '../util/' as *;
+
+
+.slack  {
+    padding: 0 28px;
+    text-align: center;
+    margin-bottom: rem(120);
+    &__image {
+        // min-width: rem(323);
+        // min-height: rem(194);
+    }
+}
+
+//323  //194

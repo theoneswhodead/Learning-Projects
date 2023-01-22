@@ -2,33 +2,86 @@
 
 .form {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: rem(32);
+    margin-bottom: rem(70);
+
+
+    &__invalid {
+         display: none;
+
+    }
+    &__btn {
+
+        input {
+            width: rem(283);
+            height: rem(42);
+            background: var(--Blue);
+            border-radius: rem(25);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+           // margin-top: rem(25);
+        }
+
+    }
 
     &__email {
-        
- 
-        border: 1px solid var(--Pale-Blue);
-        width: rem(283);
-        height: rem(42);
-        border-radius: rem(25);
-        margin-bottom: rem(10);
-        margin-top: rem(32);
+        margin-bottom: rem(10); // in desctop -> margin-right;
+        position: relative;
+        input {
 
-        &::placeholder {
+            border: 1px solid var(--Pale-Blue);
+            width: rem(283);
+            height: rem(42);
+            border-radius: rem(25);
             font-size: rem(11);
-            color: var(--Pale-Blue);
-            padding-left: 33px;
+            padding-left: rem(20);
+
+            &:focus-visible:invalid ~ .form__invalid {
+                display: inline-block;
+                position: absolute;
+                left: 50%;
+                bottom: -25px;
+                translate: -50%;
+                color: var(--Light-Red);
+                font-size: rem(11);
+                width: 100%;
+            }
+
+            &::placeholder {
+                font-size: rem(11);
+                color: var(--Pale-Blue);
+                padding-left: 33px;
+            }
         }
+
+
+
+        // &:focus-visible:invalid ~ .form__email-invalid {
+        //     display: inline-block;
+        //     position: absolute;
+        //     bottom: 0;
+        //      left: 0;
+    
+        // }
+        // &:focus-visible:invalid ~ .form__btn {
+        //     margin-top: 30px;
+        // }
+
+
+
+
+
     }
 
-    &__btn {
-        width: rem(283);
-        height: rem(42);
-        background: var(--Blue);
-        border-radius: rem(25);
-        color: #fff;
-        border: none;
-    }
+
+}
+
+
+.margin {
+    margin-top: rem(25);
 }

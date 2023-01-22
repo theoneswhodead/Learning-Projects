@@ -1,2 +1,2 @@
-"use strict";
+"use strict";var btn=document.getElementsByClassName("form__btn"),email=document.getElementsByClassName("form__email"),form=document.querySelector("form");console.log(btn),form.addEventListener("focusin",(function(e){btn[0].classList.add("margin")})),form.addEventListener("focusout",(function(e){btn[0].classList.remove("margin")}));
 //# sourceMappingURL=script.js.map

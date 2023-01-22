@@ -1,0 +1,25 @@
+@use '../util/' as *;
+
+.socials {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        width: rem(150);
+
+        i {
+
+            font-size: rem(33);
+            color: var(--Blue);
+        }
+    }
+}
+
+.copyright {
+    text-align: center;
+    font-size: rem(12);
+    color: var(--Gray);
+    margin-top: rem(40);
+}
