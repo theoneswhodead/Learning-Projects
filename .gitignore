@@ -15,3 +15,7 @@
 .DS_Store
 .history/
 node_modules/
+.img/
+img/
+..img/
+.img/
