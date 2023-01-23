@@ -1,0 +1,32 @@
+@use '../util/' as *;
+.header {
+    text-align: center;
+    margin-bottom: rem(69);
+    margin-top: rem(102);
+    max-width: 400px;
+    @include breakpoint(large) {
+        grid-column: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__title {
+        font-size: 1.375rem;
+        font-size: clamp(1.375rem, 1.1549295774647887rem + 0.9389671361502347vw, 2rem);
+        color: #fff;
+        display: block;
+
+
+    }
+    :nth-child(2) {
+        margin-bottom: rem(38);
+    }
+
+    &__text {
+        display: block;
+        font-size: rem(12);
+        color: #fff;
+        margin: 0 rem(33);
+    }
+}

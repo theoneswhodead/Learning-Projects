@@ -1,3 +1,5 @@
+@use '../util/' as *;
+
 /* Box sizing rules */
 *,
 *::before,
@@ -35,7 +37,14 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background: url('/images/bg-intro-mobile.png') center center / cover;
+  background-color: var(--Red);
+  @include breakpoint(large) {
+    background: url('/images/bg-intro-desktop.png');
+    background-color: var(--Red);
+}
+
 }
 
 /* A elements that don't have a class get default styles */
