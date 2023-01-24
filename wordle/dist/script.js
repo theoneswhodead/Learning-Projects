@@ -1,2 +1,2 @@
-"use strict";document.addEventListener("keydown",(function(){console.log("keypress")}));
+"use strict";var lettersPattern=/[a-z]/,currentGuessCount=1,currentGuess=document.querySelector("#guess"+currentGuessCount);document.addEventListener("keydown",(function(e){console.log("keypress "+e.key),console.log(currentGuess);var t=e.key;1==t.length&&lettersPattern.test(e.key)&&(console.log("is letter "),updateLetter(t))}));var updateLetter=function(e){var t=currentGuess.dataset.letters+e,s=t.length;currentGuess.dataset.letters=t,updateTiles(s,e)},updateTiles=function(e,t){document.querySelector("#guessTile"+e).innerHTML=t};
 //# sourceMappingURL=script.js.map

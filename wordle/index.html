@@ -7,9 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-  <script defer src="/dist/script.js"></script>
   <link rel="stylesheet" href="/dist/style.css">
-  <title></title>
+  <title>wordle</title>
 
   
 </head>
@@ -17,17 +16,18 @@
   <h1>Wordle Clon</h1>
 
   <section class="game">
-    <div class="guess">
-      <div class="guess__tile"></div>
-      <div class="guess__tile"></div>
-      <div class="guess__tile"></div>
-      <div class="guess__tile"></div>
-      <div class="guess__tile"></div>
+    <div id="guess1" class="guess" data-letters="">
+      <div class="guess__tile" id="guessTile1"></div>
+      <div class="guess__tile" id="guessTile2"></div>
+      <div class="guess__tile" id="guessTile3"></div>
+      <div class="guess__tile" id="guessTile4"></div>
+      <div class="guess__tile" id="guessTile5"></div>
     </div>
   </section>
 
   <section class="keyboard">
 
   </section>
+  <script src="/dist/script.js"></script>
 </body>
 </html>
