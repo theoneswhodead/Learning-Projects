@@ -1,0 +1,9 @@
+@use '../util/' as *;
+
+.wrapper {
+    padding: 0 rem(165);
+    @include breakpoint-down(medium) {
+        //  flex-direction: column;
+        padding: 0;
+      }
+}

@@ -1,65 +1,116 @@
 @use '../util/' as *;
 body {
+   // background: #666;
+   @include breakpoint-down(medium) {
     background: #666;
+}
 }
 .header {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding-top: rem(60);
+    //align-items: start;
     position: relative;
+    @include breakpoint-down(medium) {
+        padding-top: 0;
+      }
 
-    img {
-        width: rem(47);
-        height: rem(30);
+    &__logo {
+        img {
+            width: rem(66);
+            height: rem(41);
+    
+            @include breakpoint-down(medium) {
+            width: rem(47);
+            height: rem(30);
+            }
     }
+    @include breakpoint-down(medium) {
+              position: absolute;
+                 top: 0;
+                left: 0;
+                translate: 100% 180%;
+        }
+
+
+}
 
     &__nav {
-        // display: none;
-        position: absolute;
-        z-index:2;
-        width: 70%;
-        height: 100vh;
-        top: -15px;
-        right: 0;
-        @include breakpoint(medium) {
-            // ogarnąć to
-        }
-    }
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        align-self: flex-start;
 
-    &__menu {
-        background: #fff;
-        height: 100vh;
 
         ul {
-            
-            padding-top: 150px;
+            display: flex;
+            // padding-top: 150px;
+            justify-content: center;
+            align-items: center;
             li {
                 list-style-type: none;
+                padding: 20px;
                 
                a {
                 text-decoration: none;
                 font-size: rem(16);
                 color: var(--Very-dark-blue);
-                line-height: 2.6;
+                // line-height: 2.6;
                 font-weight: 700;
                } 
             }
+            @include breakpoint-down(medium) {
+                display: none;
+                height: 100vh;
+                flex-direction: column;
+                align-items: flex-start;
+                background: #fff;
+                width: 70%;
+               // display: block;
+               margin-top: 0;
+               position: absolute;
+              }
+
         }
+        
+        @include breakpoint-down(medium) {
+         //   background: #fff;
+        //    height: 100vh;
+        }
+        // display: none;
+        // position: absolute;
+        // z-index:2;
+        // width: 70%;
+        // height: 100vh;
+        // top: -15px;
+        // right: 0;
+        @include breakpoint-down(medium) {
+            // ogarnąć to
+        }
+    }
+
+    &__menu {
+
+
+
     }
 
     &__hamburger {
         position: absolute;
         top: 0;
         right: 0;
-        translate: -50% 140%;
+        translate: -100% 140%;
 
         img {
+            display: none;
             width: rem(33);
             height: rem(33);
             cursor: pointer;
+            @include breakpoint-down(medium) {
+                display: inline-block;
+            }
         }
     }
 }
 
-@include breakpoint(large) {
-
-}
