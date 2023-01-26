@@ -1,5 +1,3 @@
-
-
 const lettersPattern = /[a-z]/;
 let currentGuessCount = 1;
 let currentGuess = document.querySelector('#guess' + currentGuessCount);
@@ -31,7 +29,12 @@ document.addEventListener('keydown', (e) => {
  } else if (e.key == 'Enter' && currentGuess.dataset.letters.length == 5) {
     console.log('submit guess');
     for(let i = 0; i<5; i++) {
-        checkLetter(i);
+
+        setTimeout(() => {
+           // checkLetter(i);
+            revealTile(i, checkLetter(i)); 
+        }, i * 200);
+
     }
 
  }
@@ -75,17 +78,49 @@ const checkLetter = (position) => {
     let guessedLetter = currentGuess.dataset.letters.charAt(position);
     let solutionLetter = solutionWord.charAt(position);
 
-    console.log( guessedLetter, solutionLetter);
+   //console.log( guessedLetter, solutionLetter);
 
     if(guessedLetter == solutionLetter) {
         return 'correct';
     } else {
-        return checkLetterExists(guessedLetter) ? 'present ' : 'absent';
+        return checkLetterExists(guessedLetter) ? 'present' : 'absent';
 
 
     }
 };
 
 const checkLetterExists = (letter) => {
-    solutionWord.includes(letter);
+   return solutionWord.includes(letter);
 };
+
+const revealTile = (i, status) => {
+    console.log(`i = ${i} status = ${status}`);
+    let tileNumber = i + 1;
+    let tile = document.querySelector('#guessTile' + tileNumber);
+    let state = ''; 
+    switch(status) {
+        case 'correct': tile.classList.add('correct');
+        break; 
+
+        case 'present': tile.classList.add('present');
+        break;
+
+        case 'absent': tile.classList.add('absent');
+        break;
+    }
+    flipTile(tileNumber, status);
+};
+
+const flipTile = (tileNumber, state) => {
+    let tile = document.querySelector('#guessTile' + tileNumber);
+    tile.classList.add('flip-in');
+
+    setTimeout(() => {
+        tile.classList.add(state);
+    }, 200);
+    setTimeout(() => {
+        tile.classList.remove('flip-in');
+        tile.classList.add('flip-out');
+    }, 200);
+
+}

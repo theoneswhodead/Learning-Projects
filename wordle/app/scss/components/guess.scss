@@ -15,6 +15,21 @@
         align-items: center;
         font-size: rem(32);
         font-weight: 600;
-    }   
+    }  
+    
+    .has-letter {
+        border-color: #434343;
+    }
+    .correct {
+        background-color: green;
+    }
+
+    .present {
+        background-color: rgba(181, 159, 59);
+    }
+
+    .absent {
+        background-color: gray;
+    }
 }
 
