@@ -27,6 +27,11 @@ document.addEventListener('keydown', (e) => {
     console.log('backspace');
     deleteFromLetters();
  } else if (e.key == 'Enter' && currentGuess.dataset.letters.length == 5) {
+    submitGuess();
+ }
+});
+
+const submitGuess = () => {
     console.log('submit guess');
     for(let i = 0; i<5; i++) {
 
@@ -36,10 +41,34 @@ document.addEventListener('keydown', (e) => {
         }, i * 200);
 
     }
+}
 
- }
-});
+const cheackIfGuessComplete = (i) => {
+    if(i == 4 ) {
+        checkWin();
+    } else {
+        console.log('not win?')
+    }
+}
+const checkWin = () => {
+    if(solutionWord == currentGuess.dataset.letters) {
+        jumpTiles();
+    } else {
+        currentGuessCount++;
+        currentGuess = document.querySelector('#guess' + currentGuessCount);
+    }
+}
 
+const jumpTiles = () => {
+      for(let i = 0; i<5; i++) {
+        setTimeout(() => {
+            let currentTile = document.querySelector(`#guess${currentGuessCount}Tile${i+1}`);
+            currentTile.classList.add('jump');
+        }, i * 200);
+
+
+      }
+}
 const updateLetter = (letter) => {
     let oldletters = currentGuess.dataset.letters;
    // let tileNumber = 
@@ -50,10 +79,10 @@ const updateLetter = (letter) => {
 };
 
 const updateTiles = (tileNumber, letter) => {
-    let currentTile = document.querySelector('#guessTile' + tileNumber);
+    let currentTile = document.querySelector('#guess'+currentGuessCount +'Tile' + tileNumber);
 
     currentTile.innerHTML = letter;
-    
+    currentTile.classList.add('has-letter');
 };
 
 //backspace delete last letter
@@ -68,7 +97,9 @@ const deleteFromLetters = () => {
 
 
 const deleteFromTiles = (tileNumber) => {
-    document.querySelector('#guessTile' + tileNumber).innerText ='';
+    let currentTile = document.querySelector('#guess'+currentGuessCount+'Tile' + tileNumber);
+    currentTile.innerText ='';
+    currentTile.classList.remove('has-letter');
 };
 
 
@@ -96,7 +127,7 @@ const checkLetterExists = (letter) => {
 const revealTile = (i, status) => {
     console.log(`i = ${i} status = ${status}`);
     let tileNumber = i + 1;
-    let tile = document.querySelector('#guessTile' + tileNumber);
+    let tile = document.querySelector('#guess'+currentGuessCount+'Tile' + tileNumber);
     let state = ''; 
     switch(status) {
         case 'correct': tile.classList.add('correct');
@@ -109,10 +140,12 @@ const revealTile = (i, status) => {
         break;
     }
     flipTile(tileNumber, status);
+    cheackIfGuessComplete(i);
+
 };
 
 const flipTile = (tileNumber, state) => {
-    let tile = document.querySelector('#guessTile' + tileNumber);
+    let tile = document.querySelector('#guess'+currentGuessCount+'Tile' + tileNumber);
     tile.classList.add('flip-in');
 
     setTimeout(() => {
@@ -122,5 +155,8 @@ const flipTile = (tileNumber, state) => {
         tile.classList.remove('flip-in');
         tile.classList.add('flip-out');
     }, 200);
+    setTimeout(() => {
+        tile.classList.remove('flip-out');
+    }, 1500);
 
 }
