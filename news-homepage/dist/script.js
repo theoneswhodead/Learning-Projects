@@ -1,2 +1,2 @@
-"use strict";
+"use strict";console.log("script");var body=document.querySelector("body"),hamburger=document.querySelector(".header__img"),ul=document.querySelector("ul");console.log(hamburger);var toggle=!0;hamburger.addEventListener("click",(function(){console.log("asd"),ul.classList.toggle("hide"),toggle?(hamburger.src="/assets/images/icon-menu-close.svg",body.style.background="#807E89",body.style.transition="background 250ms ease-in-out",toggle=!1):(hamburger.src="/assets/images/icon-menu.svg",body.style.background="#fff",body.style.transition="background 250ms ease-in-out",toggle=!0)}));
 //# sourceMappingURL=script.js.map
