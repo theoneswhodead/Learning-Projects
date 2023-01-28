@@ -1,6 +1,10 @@
 @use '../util/' as *;
 
 .main {
+    @include breakpoint-up(medium) {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
     @include breakpoint-up(large) {
         grid-column: span 2;
         grid-row: span 2;
@@ -17,17 +21,20 @@
     }
 
     &__image {
+        background: url('/assets/images/image-web-3-mobile.jpg') center center / cover no-repeat;
+        min-width:rem(345);
+        min-height: rem(302);
+        margin-bottom: rem(30);
+
         @include breakpoint-up(large) {
+            background: url('/assets/images/image-web-3-desktop.jpg') center center / cover no-repeat;
             grid-column: span 2;
             grid-row: span 1;
         }
-        margin-bottom: rem(30);
-        
         img {
             min-width:rem(345);
             min-height: rem(302);
         }
-
     }
 
     &__title {
@@ -76,5 +83,11 @@
         height: rem(46);
         border: 2px solid #d02c20;
         color: #fff;
+        &:hover {
+            background: var(--Very-dark-blue);
+            border: 2px solid var(--Very-dark-blue);
+            cursor: pointer;
+        }
+
     }
 }

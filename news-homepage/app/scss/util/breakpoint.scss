@@ -1,11 +1,13 @@
 $breakpoint-up: (
     'small': '21.875em',
     'medium': '50em',
-    'large': '87.5em'
+    'large': '68.75em',
+    'xl': '90em',
 );
 $breakpoint-down: (
-    'large': '87.5em',
-    'medium': '56.25em',
+    'xl': '90em',
+    'large': '68.75em',
+    'medium': '50em',
     'small': '21.875em'  
 );
 

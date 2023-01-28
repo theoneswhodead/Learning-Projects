@@ -1,8 +1,7 @@
 @use '../util/' as *;
 .wrapper {
     padding: 0 rem(165);
-    @include breakpoint-down(medium) {
-        //  flex-direction: column;
+    @include breakpoint-down(xl) {
         padding: 0;
       }
 }
@@ -10,13 +9,12 @@
 .container {
     display: grid;
     grid-template-columns: 1fr;
-   // margin-top: rem(88);
-    margin: rem(112)  rem(18) rem(18) rem(18);
-    @include breakpoint-up(medium) {
 
-    }
+    margin: rem(112) rem(18) rem(18) rem(18);
+  
     @include breakpoint-up(large) {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+        margin: rem(18) rem(18) rem(18) rem(18);
     }
 }

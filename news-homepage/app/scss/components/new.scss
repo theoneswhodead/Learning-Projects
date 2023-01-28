@@ -1,0 +1,49 @@
+@use '../util/' as *;
+
+.new {
+    padding: rem(27) rem(23) rem(27) rem(23);
+    margin: rem(65) 0;
+    max-width: rem(352);
+    max-height: rem(513);
+
+    background: var(--Very-dark-blue);
+    @include breakpoint-up(medium) {
+        grid-column: 3 / 4;
+        grid-row: span 2;
+        margin-top: 0;
+        margin-left: rem(30);
+    }
+
+    &__title {
+        font-size: 1.6875rem;
+        font-size: clamp(1.6875rem, 1.5774647887323943rem + 0.4694835680751174vw, 2rem);
+        color: var(--orange);
+    }
+
+    &__article {
+        padding-top: rem(36);
+        &:nth-child(2), &:nth-child(3) {
+            border-bottom: 1px solid var(--Dark-blue);
+            padding-bottom: rem(36);
+            
+        }
+
+        a {
+            display: block;
+            font-size: rem(18);
+            font-weight: 800;
+            color: var(--White);
+            text-decoration: none;
+            margin-bottom: rem(16) ;
+            &:hover {
+                color:var(--orange);
+            }
+        }
+    }
+
+    &__text {
+        margin-right: rem(25);
+        font-size: rem(13);
+        color: var(--Dark-blue);
+    }
+}

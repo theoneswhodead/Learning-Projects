@@ -1,0 +1,51 @@
+@use '../util/' as *;
+
+.article {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint-up(medium) {
+        flex-direction: row;
+        margin-top: rem(30);
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+    }
+
+    &__wrapper {
+        display: flex;
+        margin-bottom: rem(34);
+
+    }
+
+    &__image {
+        margin-right: rem(24);
+        &-img {
+            max-width: rem(102) ;
+            max-height: rem(128) ;
+        }
+    }
+
+    &__body {
+
+    }
+
+    &__number {
+        font-size: rem(25);
+        color: var(--Grayish-blue);
+    }   
+
+    &__title {
+        color: var(--Very-dark-blue);
+        text-decoration: none;
+        font-size: rem(16);
+        font-weight: 800;
+        &:hover {
+            color: var(--Red);
+        }
+    }
+
+    &__text {
+        font-size: rem(13);
+        color: var(--Very-dark-blue);
+        margin-right: rem(40);
+    }
+}
