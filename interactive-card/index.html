@@ -12,6 +12,7 @@
   <title>Frontend Mentor | Interactive card details form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="/dist/style.css">
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -19,24 +20,39 @@
 </head>
 <body>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+  <div class="container">
+    <div class="top">
+      <div class="top__images">
+        <img class="top__back" src="/images/bg-card-back.png" alt="back card">
+        <p class="top__back-cvc">000</p>
+        <img class="top__front" src="/images/bg-card-front.png" alt="front card">
+        <div class="top__front-circle" ></div>
+        <div class="top__front-circle2" ></div>
+        <h1 class="top__front-number">0000 0000 0000 0000</h1>
+        <h2 class="top__front-name">Jane Appleseed</h2>
+        <h2 class="top__front-date">00/00</h2>
+      </div>
 
-  000
+    </div>
+    <div class="bottom">
+      Cardholder Name
+      e.g. Jane Appleseed
+    
+      Card Number
+      e.g. 1234 5678 9123 0000
+    
+      Exp. Date (MM/YY)
+      MM
+      YY
+    
+      CVC
+      e.g. 123
+    </div>
+  </div>
 
-  Cardholder Name
-  e.g. Jane Appleseed
 
-  Card Number
-  e.g. 1234 5678 9123 0000
 
-  Exp. Date (MM/YY)
-  MM
-  YY
 
-  CVC
-  e.g. 123
 
   Confirm
 

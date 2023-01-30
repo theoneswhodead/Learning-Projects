@@ -1,0 +1,159 @@
+@use '../util/' as *;
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.top {
+    background: url('/images/bg-main-mobile.png') center center / cover;
+    width: 100%;
+    height: rem(240);
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+
+    @include breakpoint-up(medium) {
+        background: url('/images/bg-main-desktop.png') center center / cover;
+       width: 30%;
+       height: 100vh;
+    }
+
+    img {
+        width: rem(286);
+        height: rem(157);
+        @include breakpoint-up(medium) {
+            min-width: rem(447);
+            min-height: rem(245);
+        }
+    }
+    &__images {
+        width: rem(375);
+        height: rem(240);
+        position: relative;
+
+        @include breakpoint-up(medium) {
+            width: rem(700);
+            height: rem(550);
+        
+        }
+    }
+
+    &__back {
+        position: absolute;
+        top: rem(33);
+        right: rem(15);
+        @include breakpoint-up(medium) {
+            top: rem(300);
+            left: rem(215);
+        }
+        &-cvc {
+            font-size: rem(10);
+            color: var(--White);
+            position: absolute;
+            top: 43%;
+            right: rem(55);
+
+            @include breakpoint-up(medium) {
+                font-size: rem(13);
+                top: rem(410);
+                left: rem(565);
+                
+            }
+        }
+
+    }
+
+    &__front {
+        position: absolute;
+        bottom: rem(-39);
+        left: rem(15);
+        @include breakpoint-up(medium) {
+            top: rem(20);
+            left: rem(115);
+        } 
+
+        &-circle {
+            background: var(--White);
+            width: rem(27);
+            height: rem(27);
+            position: absolute;
+            bottom: rem(70);
+            left: rem(40);
+            border-radius: 100%;
+            @include breakpoint-up(medium) {
+                width: rem(50);
+                height: rem(50);
+                top: rem(45);
+                left: rem(150);
+            }
+        }
+        &-circle2 {
+            background: transparent;
+            width: rem(14);
+            height: rem(14);
+            position: absolute;
+            bottom: rem(76);
+            left: rem(80);
+            border: 1px solid var(--White);
+            border-radius: 100%;
+            @include breakpoint-up(medium) {
+                width: rem(23);
+                height: rem(23);
+                top: rem(58);
+                left: rem(220);
+            }
+        }
+        &-number {
+            font-size: rem(16);
+            color: var(--White);
+            letter-spacing: rem(3);
+            font-weight: 100;
+            position: absolute;
+            bottom: rem(5);
+            left: rem(40);
+            @include breakpoint-up(medium) {
+                font-size: rem(23);
+                letter-spacing: rem(5);
+                width: 400px;
+                top: rem(170);
+                left: rem(150);
+            }
+        }
+
+        &-name {
+            font-size: rem(9);
+            font-weight: lighter;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--White);
+            position: absolute;
+            bottom: rem(-20);
+            left: rem(40);
+            @include breakpoint-up(medium) {
+                font-size: rem(12);
+                top: rem(225);
+                left: rem(150);
+                letter-spacing: 2px;
+                width: 100%;
+            }
+        }
+
+        &-date {
+            font-size: rem(9);
+            font-weight: lighter;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--White);
+            position: absolute;
+            bottom: rem(-20);
+            right: rem(100);  
+            @include breakpoint-up(medium) {
+                font-size: rem(12);
+                top: rem(225);
+                left: rem(470);
+            }
+        }
+    }
+}
