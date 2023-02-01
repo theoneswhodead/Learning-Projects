@@ -19,15 +19,25 @@ function getRandomNumber() {
     return Math.floor(Math.random() * 4) ;
 }
 
-function getRandomColor() {
-    let first = hex[Math.floor(Math.random() * hex.length)];
-    let second = hex[Math.floor(Math.random() * hex.length)];
-    let third = hex[Math.floor(Math.random() * hex.length)];
-    let forth = hex[Math.floor(Math.random() * hex.length)];
-    let fifth = hex[Math.floor(Math.random() * hex.length)];
-    let sixth = hex[Math.floor(Math.random() * hex.length)];
 
-    return `#${first}${second}${third}${forth}${fifth}${sixth}`;
+function getRandomColor() {
+    let  color = `#`;
+    for (let i=0; i<6; i++) {
+        let f = hex[Math.floor(Math.random() * hex.length)];
+        color += f;
+    }
+    return color;
+
+
+
+   
+    // let second = hex[Math.floor(Math.random() * hex.length)];
+    // let third = hex[Math.floor(Math.random() * hex.length)];
+    // let forth = hex[Math.floor(Math.random() * hex.length)];
+    // let fifth = hex[Math.floor(Math.random() * hex.length)];
+    // let sixth = hex[Math.floor(Math.random() * hex.length)];
+
+   // return `#${first}${second}${third}${forth}${fifth}${sixth}`;
 }
 
 

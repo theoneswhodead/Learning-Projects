@@ -1,0 +1,87 @@
+@use '../util/' as *;
+
+.bottom {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    @include breakpoint-up(medium) {
+        width: 75%;
+    }
+
+
+}
+
+.form {
+
+    margin-top: rem(95);
+
+    &__name {
+        margin-bottom: rem(22);
+        input {
+            width: rem(329);
+            height: rem(47);
+        }
+    }
+
+    &__number {
+        margin-bottom: rem(22);
+        input {
+            width: rem(329);
+            height: rem(47);
+        }
+    }
+
+    &__date {
+        margin-bottom: rem(22);
+         #month {
+            width: rem(74);
+            height: rem(47);
+        }
+
+         #year {
+            width: rem(74);
+            height: rem(47);
+        }
+
+        #cvc {
+            width: rem(166);
+            height: rem(47);
+        }
+    }
+
+    &__text {
+        font-size: rem(11);
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: rem(2);
+        color: var(--Dark-violet);
+
+        span {
+            margin-left: rem(30);
+        }
+    }
+
+    &__input {
+        border: 1px solid var(--Light-grayish-violet);
+        border-radius: rem(10);
+        padding-left: 20px;
+
+        &::placeholder {
+            font-size: rem(15);
+            color: var(--Light-grayish-violet);
+            
+        }
+    }
+
+
+}
+
+#btn {
+    font-size: rem(15);
+    color: var(--White);
+    border-radius: rem(10);
+
+    width: rem(329);
+    height: rem(55);
+    background: var(--Dark-violet);
+}
