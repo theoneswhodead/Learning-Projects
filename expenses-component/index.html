@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/dist/style.css">
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <nav class="header">
+      <div class="header__balance">
+        <h2 class="header__title">My balance</h2>
+        <h1 class="header__value">$921.48</h1>
+      </div>
+      <div class="header__logo">
+        <img src="/images/logo.svg" alt="">
+      </div>
+    </nav>
+
+    <main class="main">
+      <h1 class="main__headline">Spending - Last 7 days</h1>
+      <div class="main__charts">
+        <div class="main__mon">
+          <div class="main__mon-chart"></div>
+          <h3 class="main__day">mon</h3>
+        </div>
+
+        <div class="main__tue">
+          <div class="main__tue-chart"></div>
+          <h3 class="main__day">tue</h3>
+        </div>
+
+        <div class="main__wed">
+          <div class="main__wed-chart"></div>
+          <h3 class="main__day">wed</h3>
+        </div>
+
+        <div class="main__thu">
+          <div class="main__thu-chart"></div>
+          <h3 class="main__day">thu</h3>
+        </div>
+
+        <div class="main__fri">
+          <div class="main__fri-chart"></div>
+          <h3 class="main__day">fri</h3>
+        </div>
+
+        <div class="main__sat">
+          <div class="main__sat-chart"></div>
+          <h3 class="main__day">sat</h3>
+        </div>
+
+        <div class="main__sun">
+          <div class="main__sun-chart"></div>
+          <h3 class="main__day">sun</h3>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+ 
+
+  Total this month
+  $478.33
+
+  +2.4%
+  from last month
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="/dist/script.js"></script>
+</body>
+</html>

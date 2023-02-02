@@ -1,0 +1,37 @@
+@use '../util/' as *;
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.header {
+    width: rem(345);
+    height: rem(100);
+    background: var(--Soft-red);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: rem(6);
+    margin-top: rem(50);
+    padding: rem(22);
+
+    &__balance {
+
+    }
+
+    &__title {
+        color: var(--Very-pale-orange);
+        font-size: rem(14);
+        margin-bottom: rem(7);
+    }
+
+    &__value {
+        color: var(--Very-pale-orange);
+        font-size: rem(21);
+    }
+
+    &__logo {
+
+    }
+}

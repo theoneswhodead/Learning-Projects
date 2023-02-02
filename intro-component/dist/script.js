@@ -1,2 +1,2 @@
-"use strict";
+"use strict";function longest(e,n){e.concat(n).map(),console.log(asdf)}longest("aretheyhere","yestheyarehere"),longest("loopingisfunbutdangerous","lessdangerousthancoding"),longest("inmanylanguages","theresapairoffunctions");
 //# sourceMappingURL=script.js.map

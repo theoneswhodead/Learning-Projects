@@ -1,0 +1,70 @@
+@use '../util/' as *;
+.main {
+    background: var(--Very-pale-orange);
+    width: rem(345);
+    &__headline  {
+
+        font-size: rem(20);
+
+    }
+
+    &__charts {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+
+    &__day {
+
+    }
+
+    &__mon {
+
+        &-chart {
+
+        }
+    }
+
+    &__tue {
+
+        &-charts {
+
+        }
+    }
+
+    &__wed {
+
+        &-chart {
+
+        }
+    }
+
+    &__thu {
+
+        &-chart {
+
+        }
+    }
+
+    &__fri {
+
+        &-chart {
+
+        }
+    }
+
+    &__sat {
+
+        &-chart {
+
+        }
+    }
+
+    &__sun {
+
+        &-chart {
+
+        }
+    }
+}
