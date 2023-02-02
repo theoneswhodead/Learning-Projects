@@ -71,6 +71,20 @@
             color: var(--Light-grayish-violet);
             
         }
+        &:focus-visible:invalid {
+            border: 1px solid var(--Red);
+        }
+        &:focus-visible:invalid ~ .form__invalid{
+            opacity: 1;
+        }
+    }
+
+    &__invalid {
+        display: block;
+        font-size: rem(11);
+        color: var(--Red);
+        margin-top: rem(1);
+        opacity: 0;
     }
 
 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="/dist/style.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="top">
+      <div class="top__images">
+        <img class="top__back" src="/images/bg-card-back.png" alt="back card">
+        <p class="top__back-cvc" data-letters="">000</p>
+        <img class="top__front" src="/images/bg-card-front.png" alt="front card">
+        <div class="top__front-circle" ></div>
+        <div class="top__front-circle2" ></div>
+        <h1 class="top__front-number"data-letters="">0000 0000 0000 0000 </h1>
+        <h2 class="top__front-name" data-letters="">Jane Appleseed</h2>
+        <h2 class="top__front-date" ><span class="top__front-month" data-letters="">00</span>/<span class="top__front-year" data-letters="">00</span></h2>
+      </div>
+    </div>
+    <div class="bottom">
+        <div class="thanks">
+            <img class="thanks__img" src="/images/icon-complete.svg" alt="">
+            <h1 class="thanks__title">Thank You !</h1>
+            <p class="thanks__text">We've added your card details</p>
+
+            <form action="index.html">
+                <label for="btn"></label>
+                <input type="submit" id="btn" value="Continue">
+            </form>
+        </div>
+
+      </div>
+  </div>
+
+
+  <!-- Completed state start -->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">NyMek</a>.
+  </div>
+  <script src ="dist/script.js"></script>
+
+</body>
+</html>

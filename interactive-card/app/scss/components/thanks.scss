@@ -1,0 +1,25 @@
+@use '../util/' as *;
+
+.thanks {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    margin-top: rem(150);
+
+    &__img {
+      margin-bottom: rem(20);
+    }
+
+    &__title {
+        color: var(--Dark-violet);
+        text-transform: uppercase;
+        margin-bottom: rem(10);
+    }
+
+    &__text {
+        color: var(--Dark-grayish-violet);
+        margin-bottom: rem(40);
+    }
+}
