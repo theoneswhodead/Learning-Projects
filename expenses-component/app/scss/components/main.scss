@@ -2,69 +2,269 @@
 .main {
     background: var(--Very-pale-orange);
     width: rem(345);
+    margin-top: rem(17);
+    border-radius: 6px;
+
     &__headline  {
 
-        font-size: rem(20);
+        font-size: rem(21);
+        margin: rem(32) 0 rem(50) rem(21);
+
 
     }
 
     &__charts {
         display: flex;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        text-align: center;
+        border-bottom: 1px solid var(--Soft-red);
         
     }
 
     &__day {
-
+        font-size: rem(9);
+        margin-top: rem(16);
+        margin-bottom: rem(25);
+        color: var(--Medium-brown);
     }
 
     &__mon {
 
         &-chart {
+            background-color: var(--Soft-red);
+            border-radius: 5px;
+            width: rem(35);
+            height: rem(50);
+            position: relative;
 
+            &:hover {
+                background-color: #fe997f;
+            }
+            &:hover::after {
+                content: '$24.34';
+                position: absolute;
+                font-size: rem(11);
+                text-align: center;
+                padding-top: rem(6);
+                background: var(--Dark-brown);
+                color: var(--Very-pale-orange);
+                border-radius: rem(6);
+                width: rem(55);
+                height: rem(30);
+                top: -40px;
+                left: -10px;
+            }
         }
+
     }
 
     &__tue {
 
-        &-charts {
+        &-chart {
+            background-color: var(--Soft-red);
+            border-radius: 5px;
+            width: rem(35);
+            height: rem(100);
+            position: relative;
 
+            &:hover {
+                background-color: #fe997f;
+            }
+            &:hover::after {
+                content: '$24.34';
+                position: absolute;
+                font-size: rem(11);
+                text-align: center;
+                padding-top: rem(6);
+                background: var(--Dark-brown);
+                color: var(--Very-pale-orange);
+                border-radius: rem(6);
+                width: rem(55);
+                height: rem(30);
+                top: -40px;
+                left: -10px;
+            }
         }
     }
 
     &__wed {
 
         &-chart {
+            background-color: var(--Cyan);
+            border-radius: 5px;
+            width: rem(35);
+            height: rem(150);
+            position: relative;
 
+            &:hover {
+                background: #98d7df;
+            }
+            &:hover::after {
+                content: '$24.34';
+                position: absolute;
+                font-size: rem(11);
+                text-align: center;
+                padding-top: rem(6);
+                background: var(--Dark-brown);
+                color: var(--Very-pale-orange);
+                border-radius: rem(6);
+                width: rem(55);
+                height: rem(30);
+                top: -40px;
+                left: -10px;
+            }
         }
+
     }
 
     &__thu {
 
         &-chart {
+            background-color: var(--Soft-red);
+            border-radius: 5px;
+            width: rem(35);
+            height: rem(90);
+            position: relative;
 
+            &:hover {
+                background-color: #fe997f;
+            }
+            &:hover::after {
+                content: '$24.34';
+                position: absolute;
+                font-size: rem(11);
+                text-align: center;
+                padding-top: rem(6);
+                background: var(--Dark-brown);
+                color: var(--Very-pale-orange);
+                border-radius: rem(6);
+                width: rem(55);
+                height: rem(30);
+                top: -40px;
+                left: -10px;
+            }
         }
     }
 
     &__fri {
 
         &-chart {
+            background-color: var(--Soft-red);
+            border-radius: 5px;
+            width: rem(35);
+            height: rem(70);
+            position: relative;
 
+            &:hover {
+                background-color: #fe997f;
+            }
+            &:hover::after {
+                content: '$24.34';
+                position: absolute;
+                font-size: rem(11);
+                text-align: center;
+                padding-top: rem(6);
+                background: var(--Dark-brown);
+                color: var(--Very-pale-orange);
+                border-radius: rem(6);
+                width: rem(55);
+                height: rem(30);
+                top: -40px;
+                left: -10px;
+            }
         }
     }
 
     &__sat {
 
         &-chart {
+            background-color: var(--Soft-red);
+            border-radius: 5px;
+            width: rem(35);
+            height: rem(125);
+            position: relative;
 
+            &:hover {
+                background-color: #fe997f;
+            }
+            &:hover::after {
+                content: '$24.34';
+                position: absolute;
+                font-size: rem(11);
+                text-align: center;
+                padding-top: rem(6);
+                background: var(--Dark-brown);
+                color: var(--Very-pale-orange);
+                border-radius: rem(6);
+                width: rem(55);
+                height: rem(30);
+                top: -40px;
+                left: -10px;
+            }
         }
     }
 
     &__sun {
 
         &-chart {
+            background-color: var(--Soft-red);
+            border-radius: 5px;
+            width: rem(35);
+            height: rem(75);
+            position: relative;
 
+            &:hover {
+                background-color: #fe997f;
+            }
+            &:hover::after {
+                content: '$24.34';
+                position: absolute;
+                font-size: rem(11);
+                text-align: center;
+                padding-top: rem(6);
+                background: var(--Dark-brown);
+                color: var(--Very-pale-orange);
+                border-radius: rem(6);
+                width: rem(55);
+                height: rem(30);
+                top: -40px;
+                left: -10px;
+            }
+        }
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: rem(25);
+        margin-bottom: rem(33);
+    }
+
+    &__ftotal {
+
+    }
+
+    &__fheadline {
+        font-size: rem(13);
+        font-weight: lighter;
+        color: var(--Medium-brown);
+    }
+
+    &__famount {
+        font-size: rem(28);
+    }
+
+    &__flast {
+        text-align: right;
+        h1 {
+            font-size: rem(13);
+        }
+
+        h2 {
+            font-size: rem(11);
+            color: var(--Medium-brown);
+            font-weight: lighter;
         }
     }
 }
