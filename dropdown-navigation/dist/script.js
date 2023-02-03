@@ -1,0 +1,2 @@
+"use strict";var accordion=document.querySelectorAll(".nav__accordion"),options=document.querySelectorAll(".nav__options");accordion[0].addEventListener("click",(function(){options[0].classList.toggle("hidden"),console.log(accordion)})),accordion[1].addEventListener("click",(function(){options[1].classList.toggle("hidden")}));
+//# sourceMappingURL=script.js.map
