@@ -1,5 +1,5 @@
 $breakpoint-up: (
-    'small': '21.875em',
+    'small': '23.75em',
     'medium': '50em',
     'large': '68.75em',
     'xl': '90em',
@@ -8,7 +8,7 @@ $breakpoint-down: (
     'xl': '90em',
     'large': '68.75em',
     'medium': '50em',
-    'small': '21.875em'  
+    'small': '23.75em'  
 );
 
 @mixin breakpoint-up($size) {

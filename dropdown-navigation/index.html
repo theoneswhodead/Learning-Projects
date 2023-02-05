@@ -18,58 +18,80 @@
   <link rel="stylesheet" href="/dist/style.css">
 </head>
 <body>
+  <div class="ov">
   <div class="wrapper">
     <nav class="nav">
-      <div class="nav__logo">
-        <img src="/images/logo.svg" alt="">
-      </div>
-      <div class="nav__menu">
-        <button class="nav__accordion">Features<img src="/images/icon-arrow-down.svg" alt=""></button>
-        <button class="nav__accordion">Company<img src="/images/icon-arrow-down.svg" alt=""></button>
-        <button class="nav__accordion">Careers</button>
-        <button class="nav__accordion">About</button>
 
-        <div class="nav__options hidden">
-
-          <div class="nav__option">
-            <img src="/images/icon-todo.svg" alt="">
-            <p>Todo List</p>
-          </div>
-          <div class="nav__option">
-            <img src="/images/icon-calendar.svg" alt="">
-            <p>Calendar</p>
-          </div>
-          <div class="nav__option">
-            <img src="/images/icon-reminders.svg" alt="">
-            <p>Remainders</p>
-          </div>
-          <div class="nav__option">
-            <img src="/images/icon-planning.svg" alt="">
-            <p>Planningt</p>
-          </div>
-
+      <div class="nav__wrapper">
+        <div class="nav__logo">
+          <img src="/images/logo.svg" alt="">
         </div>
-
-        <div class="nav__options hidden">
-
-          <div class="nav__option">
-            <p>History</p>
+        <div class="nav__menu hide-for-tablet">
+          <button class="nav__accordion">Features<img src="/images/icon-arrow-down.svg" alt=""></button>
+          <button class="nav__accordion">Company<img src="/images/icon-arrow-down.svg" alt=""></button>
+          <button class="nav__accordion">Careers</button>
+          <button class="nav__accordion">About</button>
+  
+          <div class="nav__options hidden" id="one">
+  
+            <div class="nav__option">
+              <img src="/images/icon-todo.svg" alt="">
+              <p>Todo List</p>
+            </div>
+            <div class="nav__option">
+              <img src="/images/icon-calendar.svg" alt="">
+              <p>Calendar</p>
+            </div>
+            <div class="nav__option">
+              <img src="/images/icon-reminders.svg" alt="">
+              <p>Remainders</p>
+            </div>
+            <div class="nav__option">
+              <img src="/images/icon-planning.svg" alt="">
+              <p>Planning</p>
+            </div>
+  
           </div>
-          <div class="nav__option">
-            <p>Our Team</p>
+  
+          <div class="nav__options hidden" id="two">
+  
+            <div class="nav__option">
+              <p>History</p>
+            </div>
+            <div class="nav__option">
+              <p>Our Team</p>
+            </div>
+            <div class="nav__option">
+              <p>Blog</p>
+            </div>
           </div>
-          <div class="nav__option">
-            <p>Blog</p>
-          </div>
-
         </div>
-
       </div>
-      <div class="nav__log">
 
+      <div class="nav__log hide-for-mobile">
+        <button class="btn nav__login">Login</button>
+        <button class="btn nav__register">Register</button>
+      </div>
+      <div class="hmb nav__hamburger hide-for-desktop"></div>
+
+
+
+
+
+      
+
+    </nav>
+    <nav class="hamburger__menu">
+      <div class="hmb hamburger__hamburger hide-for-desktop"></div>
+      <div class="hamburger__links">
+        <button class="hamburger__accordion">Features<img src="/images/icon-arrow-down.svg" alt=""></button>
+        <button class="hamburger__accordion">Company<img src="/images/icon-arrow-down.svg" alt=""></button>
+        <button class="hamburger__accordion">Careers</button>
+        <button class="hamburger__accordion">About</button>
       </div>
     </nav>
   </div>
+</div>
   Features
   
   Careers

@@ -1,14 +1,31 @@
 @use '../util/' as *;
 
+.overlay {
+    @include breakpoint-down(medium) { /// JS on 
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        background: linear-gradient(var(--Medium-Gray), transparent);
+    }
+}
+
 .nav {
     display: flex;
+    justify-content: space-between;
     margin: rem(32) rem(30) 0 rem(40);
+
+    &__wrapper {
+        display: flex;
+
+    }
     &__logo {
 
     }
 
     &__menu {
-
+        position: relative;
     }
 
     &__accordion {
@@ -28,20 +45,85 @@
     }
 
     &__options {
-        background-color: red;
-        box-shadow: 3px 3px 3px rgba(0,0,0,0.05),
-                    -3px -3px -3px rgba(0,0,0,0.5),
-                    4px 5px 5px rgba(0,0,0,0.5)
-                    ;
-        width: rem(100);
+        background: #fff;
+        box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+        width: rem(140);
+        border-radius: rem(10);
+        padding: rem(10);
     }
 
     &__option {
+        display: flex;
+        margin-top: rem(20);
+        
+        p {
+            margin-left: rem(14);
+
+            justify-content: flex-end;
+            font-size: rem(13);
+        }
 
     }
+
+    &__log {
+
+    }
+
+    &__login {
+        margin-right: rem(35);
+
+    }
+
+    &__register {
+        border: 2px solid var(--Medium-Gray) !important;
+        padding: rem(8) rem(20);
+        border-radius: rem(15);
+    }
+
+    &__hamburger {
+        background: url('/images/icon-menu.svg') center center no-repeat;
+        width: rem(26);
+        height: rem(26);
+    }
+}
+
+.btn {
+    font-size: rem(13);
+    color: var(--Medium-Gray);
+    background: transparent;
+    border: none;
 }
 
 
 .hidden {
-    display: none;
+   display: none;
+}
+
+#one {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+}
+
+#two {
+    position: absolute;
+    top: 100%;
+    left: 38%;
+}
+
+.hide-for-tablet {
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+.hide-for-desktop {
+    @include breakpoint-up(medium) {
+        display: none;
+    }
+}
+
+.hide-for-mobile {
+    @include breakpoint-down(medium) {
+        display: none;
+    }
 }

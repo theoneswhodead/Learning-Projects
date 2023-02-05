@@ -1,0 +1,50 @@
+@use '../util/' as *;
+
+.hamburger {
+
+    &__menu {
+        //display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--Almost-White);
+        margin-left: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        height: 100vh;
+        width: 245px;
+        z-index: 5;
+        opacity: 0;
+    }
+    &__hamburger {
+        background: url('/images/icon-close-menu.svg') center center no-repeat;
+        width: rem(26);
+        height: rem(26);
+        padding: 40px;
+    }
+
+    &__links {
+        display: flex;
+        margin-right: rem(145);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__accordion {
+        background: transparent;
+        border: none;
+        position: relative;
+        margin-bottom: rem(30);
+
+        img {
+            position: absolute;
+            top: 10px;
+            right: -15px;
+        }
+    } 
+}
+
+.hide {
+    opacity: 1;
+}
