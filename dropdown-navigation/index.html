@@ -27,8 +27,8 @@
           <img src="/images/logo.svg" alt="">
         </div>
         <div class="nav__menu hide-for-tablet">
-          <button class="nav__accordion">Features<img src="/images/icon-arrow-down.svg" alt=""></button>
-          <button class="nav__accordion">Company<img src="/images/icon-arrow-down.svg" alt=""></button>
+          <button class="nav__accordion">Features<img class="arrow" src="/images/icon-arrow-down.svg" alt=""></button>
+          <button class="nav__accordion">Company<img class="arrow" src="/images/icon-arrow-down.svg" alt=""></button>
           <button class="nav__accordion">Careers</button>
           <button class="nav__accordion">About</button>
   
@@ -84,28 +84,69 @@
     <nav class="hamburger__menu">
       <div class="hmb hamburger__hamburger hide-for-desktop"></div>
       <div class="hamburger__links">
-        <button class="hamburger__accordion">Features<img src="/images/icon-arrow-down.svg" alt=""></button>
-        <button class="hamburger__accordion">Company<img src="/images/icon-arrow-down.svg" alt=""></button>
+        <button class="hamburger__accordion">Features<img class="arrow" src="/images/icon-arrow-down.svg" alt=""></button>
+        <div class="hamburger__options hidden" id="three">
+  
+          <div class="hamburger__option">
+            <img src="/images/icon-todo.svg" alt="">
+            <p>Todo List</p>
+          </div>
+          <div class="hamburger__option">
+            <img src="/images/icon-calendar.svg" alt="">
+            <p>Calendar</p>
+          </div>
+          <div class="hamburger__option">
+            <img src="/images/icon-reminders.svg" alt="">
+            <p>Remainders</p>
+          </div>
+          <div class="hamburger__option">
+            <img src="/images/icon-planning.svg" alt="">
+            <p>Planning</p>
+          </div>
+  
+        </div>
+        <button class="hamburger__accordion">Company<img class="arrow" src="/images/icon-arrow-down.svg" alt=""></button>
+        
+        <div class="hamburger__options hidden" id="four">
+
+          <div class="hamburger__option">
+            <p>History</p>
+          </div>
+          <div class="hamburger__option">
+            <p>Our Team</p>
+          </div>
+          <div class="hamburger__option">
+            <p>Blog</p>
+          </div>
+        </div>
         <button class="hamburger__accordion">Careers</button>
         <button class="hamburger__accordion">About</button>
       </div>
+
+      <div class="hamburger__log">
+        <button class="btn hamburger__login">Login</button>
+        <button class="btn hamburger__register">Register</button>
+      </div>
+
+
+
     </nav>
+
+    <main class="hero">
+        <div class="hero__image">
+          <img src="/images/image-hero-mobile.png" alt="">
+        </div>
+        <div class="hero__main">
+          <h1 class="hero__title">Make remote work</h1>
+          <p class="hero__text"> Get your team in sync, no matter your location. Streamline processes, 
+            create team rituals, and watch productivity soar.</p>
+            <button class="hero__button">Learn more</button>
+        </div>
+    </main>
+
   </div>
 </div>
-  Features
-  
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
+ 
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
