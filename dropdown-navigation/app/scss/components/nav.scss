@@ -92,6 +92,13 @@
     color: var(--Medium-Gray);
     background: transparent;
     border: none;
+    cursor: pointer;
+
+    a {
+        text-decoration: none;
+        font-size: rem(13);
+        color: var(--Medium-Gray);
+    }
 }
 
 
@@ -127,3 +134,4 @@
         display: none;
     }
 }
+
