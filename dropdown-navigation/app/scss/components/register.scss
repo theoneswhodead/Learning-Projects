@@ -1,0 +1,64 @@
+@use '../util/' as *;
+
+.form {
+    height: 100vh;
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        label {
+            margin-top: rem(20);
+            margin-bottom: rem(10);
+            text-transform: uppercase;
+            font-size: rem(15);
+            color: var(--Almost-Black);
+            letter-spacing: 1px;
+            position: relative;
+            width: rem(100);
+            text-align: center;
+        }
+        input {
+            padding-left: rem(23);
+            width: rem(300);
+            height: rem(50);
+            border: none;
+           // border: 2px solid var(--Medium-Gray);
+           box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.158),
+                        -2px -2px 12px rgba(255, 255, 255, 0.25),
+                         inset 3px 3px 4px rgba(247, 247, 247, 0.1),
+                        4px 4px 8px rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+
+            &::placeholder {
+                color: var(--Almost-Black);
+            }
+            &:focus-visible ~ label span {
+                opacity: 1;
+            }
+
+        }
+    }
+}
+
+#btn {
+    padding-left: 0;
+    background: var(--Almost-Black);
+    color: var(--Almost-White);
+}
+
+#btn:hover {
+    background: var(--Almost-White);
+    color: var(--Almost-Black);
+    cursor: pointer;   
+}
+
+.invalid {
+    opacity: 0;
+    position: absolute;
+    top: 45px;
+    right: -80px;
+    color: red;
+    
+}
