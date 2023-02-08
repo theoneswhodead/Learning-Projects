@@ -121,17 +121,21 @@
 .hide-for-tablet {
     @include breakpoint-down(medium) {
         display: none;
+        pointer-events: none;
     }
 }
 .hide-for-desktop {
     @include breakpoint-up(medium) {
         display: none;
+        pointer-events: none;
     }
+
 }
 
 .hide-for-mobile {
     @include breakpoint-down(medium) {
         display: none;
+        pointer-events: none;
     }
 }
 
