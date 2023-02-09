@@ -1,0 +1,50 @@
+@use '../util/' as *;
+
+.sum {
+    background: var(--Very-dark-cyan);
+    border-radius: 10px;
+    padding: rem(24);
+    margin-top: rem(32);
+
+    &__title {
+        color: var(--White);
+        font-size: rem(15);
+        &-bot {
+            color: var(--Grayish-cyan);
+            font-size: rem(11);
+        }
+    }
+    &__amount {
+        margin-bottom: rem(30);
+    }
+
+    &__total {
+        margin-bottom: rem(30);
+    }
+    &__summary {
+        color: var(--Strong-cyan);
+        font-size: rem(24);
+        &-amount {
+            
+        }
+
+        &-total {
+
+        }
+    }
+
+    &__reset {
+        width: 100%;
+        height: rem(48);
+        background: var(--Strong-cyan);
+        color: var(--Very-dark-cyan);
+        border-radius: 6px;
+        border: none;
+        text-transform: uppercase;
+
+        &:hover {
+            background: var(--Light-cyan);
+            cursor: pointer;
+        }
+    }
+}

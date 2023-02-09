@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/dist/style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+
+    <div class="container container__flex">
+      <div class="calc calc__flex">
+        <div>
+        <div class="calc__input">
+          <h1 class="calc__title">Bill</h1>
+          <label for="bill"></label>
+          <input class="calc__num bill" type="number" placeholder="0"> 
+        </div>
+        <div class="calc__input calc__input-grid">
+          <h1 class="calc__title">Select Tip %</h1>
+
+          <div>
+            <label for="bill"></label>
+            <input class="calc__btn" type="submit" value="5%">
+          </div>
+          <div>
+            <label for="bill"></label>
+            <input class="calc__btn" type="submit" value="10%">
+          </div>
+          <div>
+            <label for="bill"></label>
+            <input class="calc__btn" type="submit" value="15%">
+          </div>
+          <div>
+            <label for="bill"></label>
+            <input class="calc__btn" type="submit" value="25%">
+          </div>
+          <div>
+            <label for="bill"></label>
+            <input class="calc__btn" type="submit" value="50%">
+          </div>
+
+          <div>
+            <label for="bill"></label>
+            <input class="calc__btn" id="custom" type="number" placeholder="Custom">
+          </div>
+        
+
+
+        </div>
+
+        <div class="calc__input">
+          <h1 class="calc__title">Number of People</h1>
+          <label for="bill"></label>
+          <input class="calc__num people" type="number" required placeholder="0">
+        </div>
+      </div>
+
+
+
+        <div class="sum">
+          <div class="sum__amount sum__flex">
+            <h1 class="sum__title">Tip Amount  <br /><span class="sum__title-bot">/ person</span></h1>
+            <div class="sum__summary sum__summary-amount">$0.00</div>
+          </div>
+          <div class="sum__total sum__flex">
+            <h1 class="sum__title">Total <br /> <span class="sum__title-bot">/ person</span></h1>
+            <div class="sum__summary sum__summary-total">$0.00</div>
+          </div>
+          <button class="sum__reset">Reset</button>
+        </div>
+      </div>
+    </div>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="/dist/script.js"></script>
+</body>
+</html>

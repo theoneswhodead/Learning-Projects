@@ -1,0 +1,55 @@
+@use '../util/' as *;
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.container {
+
+    &__flex {
+        
+    }
+}
+
+.calc {
+    //width: rem(375);
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        @include breakpoint-up(medium) {
+            flex-direction: row;
+        }
+    }
+    &__input-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 16px;
+        @include breakpoint-up(medium) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+    &__title {
+        grid-column: span 2;
+        @include breakpoint-up(medium) {
+            grid-column: span 3;
+        }
+    }
+}
+
+.sum {
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+
+
