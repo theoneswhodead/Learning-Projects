@@ -5,6 +5,11 @@
     border-radius: 10px;
     padding: rem(24);
     margin-top: rem(32);
+    @include breakpoint-up(medium) {
+        width: rem(415);
+        height: rem(418);
+        margin-left: rem(45);
+    }
 
     &__title {
         color: var(--White);
@@ -23,9 +28,12 @@
     }
     &__summary {
         color: var(--Strong-cyan);
-        font-size: rem(24);
+        font-size: 1.5rem;
+        font-size: clamp(1.5rem, 0.7279411764705883rem + 3.294117647058823vw, 2.375rem);
+
+
         &-amount {
-            
+            margin-bottom: rem(60);
         }
 
         &-total {
@@ -41,6 +49,9 @@
         border-radius: 6px;
         border: none;
         text-transform: uppercase;
+        @include breakpoint-up(medium) {
+            margin-top: rem(70);
+        }
 
         &:hover {
             background: var(--Light-cyan);
