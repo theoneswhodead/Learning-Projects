@@ -156,7 +156,7 @@ picture, svg{
     font-weight: var(--fw-regular);
 }
 
-.fw-primary-heading {
+.fs-primary-heading {
     font-size: var(--fs-primary-heading);
 }
 
