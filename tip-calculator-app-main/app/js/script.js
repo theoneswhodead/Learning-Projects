@@ -7,16 +7,46 @@ const total = document.querySelector('.sum__summary-total');
 
 const reset = document.querySelector('.sum__reset');
 
- let sum = 0;
+
+let tip = 0;
+
+function updateTotal() {
+    const billValue = parseInt(document.getElementById('bill').value);
+    const peopleValue = parseInt(document.getElementById('people').value);
+
+    let sum = 0;
+    let amountTip = billValue;
+    console.log('xd ' + tip);
+
+    if(peopleValue > 0) {
+        sum = (billValue / peopleValue);
+        console.log('xd4 ' + tip + 'sadsad' + sum);
+        amountTip *= tip /  peopleValue;
+        console.log('xd2 ' + amountTip);
+    }else {
+        sum = 0;
+        amountTip = 0;
+    }
+    
+    total.innerText = `${sum.toFixed(2)}`;
+    amount.innerText = `${amountTip.toFixed(2)}`;
+  
+}
+
+    btn.forEach(button => {
+        button.addEventListener('click', (e) => {
+           tip = (parseInt(button.value))/100;
+        });
+    });
 
 
-// bill.addEventListener('keydown', e => {
+people.addEventListener('keyup', (e) => {
 
-// })
+    updateTotal();
 
-
-sum = parseFloat(bill.value) / parseFloat(people.value);
-reset.addEventListener('click', () => {
-    total.innerText = `${sum}`;
 })
-console.log(sum);
+
+
+reset.addEventListener('click', e => {
+    location.reload()
+})
