@@ -7,7 +7,6 @@ const total = document.querySelector('.sum__summary-total');
 
 const reset = document.querySelector('.sum__reset');
 
-
 let tip = 0;
 
 function updateTotal() {
@@ -30,7 +29,7 @@ function updateTotal() {
     
     total.innerText = `${sum.toFixed(2)}`;
     amount.innerText = `${amountTip.toFixed(2)}`;
-  
+
 }
 
     btn.forEach(button => {
@@ -39,13 +38,11 @@ function updateTotal() {
         });
     });
 
-
 people.addEventListener('keyup', (e) => {
 
     updateTotal();
 
 })
-
 
 reset.addEventListener('click', e => {
     location.reload()
