@@ -38,7 +38,7 @@ function updateTotal() {
         });
     });
 
-people.addEventListener('keyup', (e) => {
+people.addEventListener('change', (e) => {
 
     updateTotal();
 

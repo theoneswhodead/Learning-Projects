@@ -1,0 +1,78 @@
+@use '../utils/' as *;
+
+.hero {
+
+    &__card {
+        background: var(--gray);
+        text-align: center;
+        border-radius: 1rem;
+
+        @include breakpoint(medium) {
+            border-radius: 1.5rem;
+        }
+    }
+}
+
+.fa-solid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+    width: 60px;
+    height: 60px;
+    opacity: 0.15;
+}
+
+.fa-globe {
+    color: var(--icon-violet);
+    font-size: 1.75rem;
+    position: relative;
+    margin-top: 2.3125rem;
+}
+
+.fa-globe::after {
+    content: '';
+    transform: translate(-28%, -28%);
+    background-color: var(--icon-violet);
+
+}
+
+.fa-vr-cardboard {
+    color: var(--icon-blue);
+    font-size: 1.75rem;
+    position: relative;
+    margin-top: 2.3125rem;
+}
+
+.fa-vr-cardboard::after {
+    content: '';
+    transform: translate(-22%, -28%);
+    background-color: var(--icon-blue);
+}
+
+.fa-radiation {
+    color: var(--icon-cyan);
+    font-size: 1.75rem;
+    position: relative;
+    margin-top: 2.3125rem;
+}
+
+.fa-radiation::after {
+    content: '';
+    transform: translate(-27%, -28%);
+    background-color: var(--icon-cyan);
+}
+
+.fa-microchip {
+    color: var(--icon-yellow);
+    font-size: 1.75rem;
+    position: relative;
+    margin-top: 2.3125rem;
+}
+.fa-microchip::after {
+    content: '';
+    transform: translate(-28%, -28%);
+    background-color: var(--icon-yellow);
+}
+

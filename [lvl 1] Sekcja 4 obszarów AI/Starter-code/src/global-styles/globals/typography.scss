@@ -1,0 +1,47 @@
+@use '../utils/' as *;
+
+h1 {
+    font-size: 2rem;
+    font-size: clamp(2rem, 1.7234042553191489rem + 1.1347517730496455vw, 3rem);
+    letter-spacing: -0.2%;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(large) {
+        text-align: left;
+    }
+}
+
+h2 {
+    color: var(--white);
+    margin-bottom: 2rem;
+    
+    @include breakpoint(large) {
+        text-align: left;
+    }
+}
+
+h3 {
+    margin: 2.125rem 0 1.375rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.25rem;
+}
+a:hover, a:focus {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+p {
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.9308510638297872rem + 0.28368794326241137vw, 1.25rem);
+    color: #9395A1;
+    line-height: 1.7;
+    margin-bottom: 1.625rem;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+}

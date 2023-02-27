@@ -1,0 +1,41 @@
+@use '../utils/' as *;
+
+.hero {
+    padding: 3.625rem 1.125rem 4rem 1.125rem;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include breakpoint(medium) {
+        padding: 3.625rem 5.125rem 4rem 5.125rem;
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+
+    @include breakpoint(large) {
+        padding: 7.625rem 7.125rem 4rem 7.125rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__header {
+        @include breakpoint(large) {
+            margin-right: 2.75rem;
+        }
+        @include breakpoint(xlarge) {
+            margin-right: 8.75rem;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        @include breakpoint(medium) {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        @include breakpoint(large) {
+            gap: 2rem;
+        }
+    }
+}
