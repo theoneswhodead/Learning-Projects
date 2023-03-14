@@ -3,10 +3,12 @@ window.addEventListener('load', () => {
     let lat;
 
     if(navigator.geolocation) {
+        
         navigator.geolocation.getCurrentPosition(position => {
             long = position.coords.longitude;
             lat = position.coords.latitude;
         })
+
     }else {
         h1.textContenr = "Enable your geolocation";
     }
