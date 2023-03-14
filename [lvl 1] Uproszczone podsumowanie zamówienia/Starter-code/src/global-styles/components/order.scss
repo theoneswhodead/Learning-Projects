@@ -1,0 +1,129 @@
+@use '../utils/' as *;
+
+.order {
+    max-width: 344px;
+    border-radius: 1rem;
+    text-align: center;
+    background: var(--white);
+
+    @include breakpoint(large) {
+        max-width: 460px;
+    }
+
+    &__image {
+        background-image: url('/public/images/AdobeStock_33183051.png');
+        width: 344px;
+        height: 188px;
+        border-radius: 1rem 1rem 0 0;
+        margin-bottom: 3rem;
+        @include breakpoint(large) {
+            background-image: url('/public/images/deskto[.png');
+            width: 460px;
+            height: 232px;
+            margin-bottom: 2.385rem;
+        }
+    }
+
+    &__summary {
+        margin-bottom: 1.25rem;
+    }
+
+    &__annual {
+        margin: auto;
+        background: var(--bg);
+        margin-top: 2.5rem;
+        width: 311px;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
+
+        @include breakpoint(large) {
+            width: 428px;
+            padding: 1rem;
+        }
+
+
+
+        &-wrapper {
+            margin-right: 1.7rem;
+            text-align: left;
+            @include breakpoint(large) {
+                margin-right: 5rem;
+                margin-top: 0.375rem;
+            }
+        }
+        &-h2 {
+           padding-bottom: 10px;
+    
+        }
+
+        &__plan-img {
+            padding: 0.75rem;
+            padding-right: 1.5rem;
+            border-right: 1px solid var(--stroke);
+            
+            @include breakpoint(large) {
+                padding: 0.75rem;
+                padding-left: 1.25rem;
+                padding-right: 2.2rem;
+            }
+        }
+    }
+
+    &__change{
+        color: var(--primary);
+        display: block;
+        margin-right: 1rem;
+
+        &:hover {
+            color: #490245;
+            cursor: pointer;
+        }
+
+        @include breakpoint(large) {
+            margin-top: 1rem;
+        }
+    }
+
+    &__cancel {
+        display: block;
+        margin-top: 1.25rem;
+        color: var(--tile);
+        padding-bottom: 2rem;
+        
+    }
+}
+
+.button {
+    background: var(--primary);
+    color: var(--white);
+    margin-top: 2.5rem;
+    padding: 0.75rem 4.75rem;
+    border-radius: 1rem;
+
+    &:hover {
+        background: #490245;
+        cursor: pointer;
+    }
+
+    @include breakpoint(large) {
+        margin-top: 2.6rem;
+        width: 428px;
+    }
+}
+
+.body__text-one {
+    padding: 0rem 2rem;
+
+    @include breakpoint(large) {
+        padding: 0rem 4rem;
+        margin-top: 20px;
+        line-height: 1.6;
+    }
+}
+
+.loading {
+    background: #d606c5;
+}

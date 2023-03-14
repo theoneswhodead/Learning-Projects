@@ -11,19 +11,39 @@
 <!-- In order to start your challenge, remove all the content inside <div id="home-page"></div> and start coding :) -->
 
 <body>
-  <div id="home-page">
-    <div>
-      <img src="/public/images/javascript.svg" class="logo vanilla" alt="JavaScript logo" />
-      <h1>INVO Academy JS Starter with Vite</h1>
-      <p>
-        See the README.md for more information on how to start your challenge.
-      </p>
-      <div class="card">
-        <button id="counter" type="button"></button>
-      </div>
-    </div>
-  </div>
+    <section class="order">
+      <div class="order__image"></div>
+      <h1 class="order__summary">Order Summary</h1>
+      <p class="body__text-one">You're close! Confirm your purchase and complete your order in the next step</p>
 
+     
+
+        <div class="order__annual">
+          <div class="order__annual__plan-img">
+            <img  src="/public/images/Vector.png" alt="">
+          </div>
+          <div class="order__annual-wrapper">
+            <h2 class="order__annual-h2">Annual Plan</h2>
+            <p class="body__text-two">$58.99 / year</p>
+          </div>
+
+          <a class="order__change link" href="#" >Change</a>
+        </div>
+
+        <button class="button button__text" onclick="startPayment()">Proceed to Payment</button>
+        <a class="order__cancel link" href="/">Cancel Order</a>
+
+
+      
+    </section>
+
+    <script>
+      function startPayment() {
+     
+      document.querySelector(".button").textContent = "Loading...";
+      document.querySelector(".button").classList.add("loading");
+  }
+    </script>
   <script type="module" src="/src/global-scripts/main.js"></script>
   <script type="module" src="/src/pages/home-page/scripts/home-page.js"></script>
 </body>

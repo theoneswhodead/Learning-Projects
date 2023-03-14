@@ -1,0 +1,66 @@
+@use '../utils/' as *;
+
+h1 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: var(--tile);
+
+    @include breakpoint(large){
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: var(--tile);
+
+
+    @include breakpoint(large){
+        font-size: 1.125rem;
+        line-height: 1.125rem;
+    }
+}
+
+.body__text-one {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.3rem;
+    color: var(--body);
+
+    @include breakpoint(large){
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+}
+
+.body__text-two {
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    color: var(--body);
+
+    @include breakpoint(large){
+        font-size: 0.875rem;
+        line-height: 0.875rem;
+    }
+}
+
+.button__text {
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.link {
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 1.6;
+
+    @include breakpoint(large){
+        font-size: 1rem;
+    }
+}

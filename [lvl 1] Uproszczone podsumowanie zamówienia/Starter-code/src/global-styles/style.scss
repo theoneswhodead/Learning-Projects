@@ -1,15 +1,11 @@
 /// Main Styles File
 /// Here we import all the global Styles files we need for our project.
 
-@import "styles/normalize.scss";
-@import "styles/root.scss";
-@import "styles/fonts.scss";
+@use 'globals';
+@use 'components';
+@use 'utils';
 
 body {
-  font-family: 'Roboto', sans-serif;
-  color: var(--color-primary);
-}
-
-p {
-  color: var(--color-on-surface);
+  font-family: 'Manrope', sans-serif;
+  background: var(--bg);
 }
