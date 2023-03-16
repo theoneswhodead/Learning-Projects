@@ -1,1 +1,10 @@
+@use '../util/' as *;
+
 //Font size: 18px (card titles e.g. Work, Play)
+h1 {
+    font-size: 1rem;
+}
+
+h2 {
+    font-size: rem(13);
+}

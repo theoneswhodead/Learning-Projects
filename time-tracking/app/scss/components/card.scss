@@ -1,0 +1,45 @@
+@use '../util/' as *;
+
+.card {
+    margin: 20px auto;
+    
+    width: rem(330);
+    height: rem(162);
+    background: var(--red);
+    border-radius: 15px;
+    
+    &__top {
+        height: rem(40);
+            position: relative;
+        &-image {
+            position: absolute;
+            z-index: 1;
+        }
+    }
+
+    &__bottom {
+        background: var(--Dark-blue);
+        border-radius: 15px;
+        height: calc(100% - rem(40));
+    }
+
+    &__title {
+
+    }
+
+    &__hrs {
+
+    }
+
+    &__second {
+
+    }
+
+    &__menu {
+
+    }
+
+    &__last {
+
+    }
+}

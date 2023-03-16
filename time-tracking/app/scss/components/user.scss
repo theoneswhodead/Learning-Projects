@@ -1,0 +1,64 @@
+@use '../util/' as *;
+
+
+.user {
+    background: var(--Dark-blue);
+    border-radius: 15px;
+    margin: 0 auto;
+    width: rem(330);
+
+    &__top {
+        background: var(--Blue);
+        border-radius: 15px;
+
+        &-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+
+            & div {
+              width: 100%;  
+              padding-left: 1rem;
+            }
+            & img {
+                width: rem(66);
+                height: rem(66);
+                border-radius: 50%;
+                border: 3px solid #eee;
+            }
+
+            & h1 {
+                color: #eee;
+                letter-spacing: 2px;
+                
+            }
+
+            & h2 {
+                color: var(--Pale-Blue);
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-around;
+        padding: 1.5rem 2rem;
+
+        & button {
+            background-color: transparent;
+            border: none;
+            
+            color: var(--Desaturated-blue);
+
+            &:hover {
+                color: #eee;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.card__top {
+    color: white;
+}
