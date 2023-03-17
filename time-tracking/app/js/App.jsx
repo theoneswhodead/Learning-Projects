@@ -11,24 +11,27 @@ function App() {
 
     setTime(current => current = data);
 
-    //console.log('argument from Child: ', current);
+
   };
 
-  //const [state, setState] = useState('daily');
 
 
   return (
-    <>
+    <div className='container'>
       <User handleClick={handleClick} />
+      <div className='Cards'>
       <Card data={data} time = {time} title={'Work'}/>
-      {/* <Card data={data} time = {time} title={'Play'}/>
+      <Card data={data} time = {time} title={'Play'}/>
       <Card data={data} time = {time} title={'Study'}/>
       <Card data={data} time = {time} title={'Exercise'}/>
-      <Card data={data} time = {time} title={'Social'}/> */}
+      <Card data={data} time = {time} title={'Social'}/>
+      <Card data={data} time = {time} title={'Self'}/>
+      </div>
 
-      <h2>Count: {time}</h2>
 
-    </>
+
+
+    </div>
 
   )
 }

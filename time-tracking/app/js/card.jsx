@@ -14,13 +14,28 @@ if(time == 'monthly') {
 
 let asd;
 
+let bgclr= {
+    Work: 'hsl(15, 100%, 70%)',
+    Play: 'hsl(195, 74%, 62%)',
+    Study: 'hsl(348, 100%, 68%)',
+    Exercise: 'hsl(145, 58%, 55%)',
+    Social: 'hsl(264, 64%, 52%)',
+    Self: 'hsl(43, 84%, 65%)'
+};
+
 switch(time) {
     case 'daily': {
          asd = data.map(e => {
             if(e.title == title) {
+
+
+
+                const styles = {
+                    backgroundColor: bgclr[title]
+                }
                 return (
 
-                <div className='card'>
+                <div style={styles} className='card' >
                     <div className="card__top">
                          <img className='card__top-image' src={`/images/icon-${title.toLowerCase()}.svg`} alt="work" />
                     </div>
@@ -28,11 +43,11 @@ switch(time) {
                     <div className="card__bottom">
                         <div className="card__first">
                             <h1 className="card__title">{e.title}</h1>
-                            <h2 className='card_hrs'>{e.timeframes.daily.current}</h2>
+                            <h2 className='card__hrs'>{e.timeframes.daily.current}Hrs</h2>
                         </div>
                         <div className="card__second">
                             <h3 className='card__menu'>...</h3>
-                            <h3 className='card__last'>{e.timeframes.daily.previous}</h3>
+                            <h3 className='card__last'>Last Day - {e.timeframes.daily.previous}hrs</h3>
                         </div>
                     </div>
                 </div>
@@ -46,25 +61,30 @@ switch(time) {
     case 'weekly': {
         asd = data.map(e => {
             if(e.title == title) {
+                const styles = {
+                    backgroundColor: bgclr[title]
+                }
                 return (
+                    
 
-                <div>
-                    <div className="card__top">
-                         <img src={`/images/icon-${title.toLowerCase()}.svg`} alt="work" />
-                    </div>
-                    <div className="card__bottom">
-                        <div>
-                            <h1>{e.title}</h1>
-                            <h2>{e.timeframes.weekly.current}</h2>
+                    <div style={styles} className='card'>
+                        <div className="card__top">
+                             <img className='card__top-image' src={`/images/icon-${title.toLowerCase()}.svg`} alt="work" />
                         </div>
-                        <div>
-                            <h3>...</h3>
-                            <h3>{e.timeframes.weekly.previous}</h3>
+    
+                        <div className="card__bottom">
+                            <div className="card__first">
+                                <h1 className="card__title">{e.title}</h1>
+                                <h2 className='card__hrs'>{e.timeframes.weekly.current}Hrs</h2>
+                            </div>
+                            <div className="card__second">
+                                <h3 className='card__menu'>...</h3>
+                                <h3 className='card__last'>Last Week - {e.timeframes.weekly.previous}hrs</h3>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                )
+    
+                    )
             }
         
         })
@@ -73,25 +93,29 @@ switch(time) {
     case 'monthly': {
         asd = data.map(e => {
             if(e.title == title) {
+                const styles = {
+                    backgroundColor: bgclr[title]
+                }
                 return (
 
-                <div>
-                    <div className="card__top">
-                         <img src={`/images/icon-${title.toLowerCase()}.svg`} alt="work" />
-                    </div>
-                    <div className="card__bottom">
-                        <div>
-                            <h1>{e.title}</h1>
-                            <h2>{e.timeframes.monthly.current}</h2>
+                    <div style={styles} className='card'>
+                        <div className="card__top">
+                             <img className='card__top-image' src={`/images/icon-${title.toLowerCase()}.svg`} alt="work" />
                         </div>
-                        <div>
-                            <h3>...</h3>
-                            <h3>{e.timeframes.monthly.previous}</h3>
+    
+                        <div className="card__bottom">
+                            <div className="card__first">
+                                <h1 className="card__title">{e.title}</h1>
+                                <h2 className='card__hrs'>{e.timeframes.monthly.current}Hrs</h2>
+                            </div>
+                            <div className="card__second">
+                                <h3 className='card__menu'>...</h3>
+                                <h3 className='card__last'>Last Month - {e.timeframes.monthly.previous}hrs</h3>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                )
+    
+                    )
             }
         
         })

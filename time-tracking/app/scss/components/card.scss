@@ -1,45 +1,61 @@
 @use '../util/' as *;
 
 .card {
-    margin: 20px auto;
+  //  margin: 20px auto;
     
     width: rem(330);
-    height: rem(162);
-    background: var(--red);
+  //  background: var(--Light-red);
     border-radius: 15px;
     
     &__top {
+        overflow: hidden;
         height: rem(40);
             position: relative;
         &-image {
             position: absolute;
-            z-index: 1;
+            top: -20%;
+            right: 5%;
         }
     }
 
     &__bottom {
         background: var(--Dark-blue);
-        border-radius: 15px;
-        height: calc(100% - rem(40));
+        border-radius: 13px;
+        height: calc(100% - rem(40)); //
+
+        padding: 2rem 1.25rem; 
+        display: flex;
+        justify-content: space-between;
     }
 
     &__title {
-
+        color: #eee;
+       
     }
 
     &__hrs {
-
+        color: #eee;
+        font-size: rem(26) ;
+        font-weight: 300;
     }
 
     &__second {
-
+        
     }
 
     &__menu {
-
+        text-align: right;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 1.2rem;
+        color: var(--Pale-Blue);
+        &:hover {
+            color: #eee;
+            cursor: pointer;
+        }
     }
 
     &__last {
-
+        color: var(--Pale-Blue);
     }
 }
