@@ -1,0 +1,66 @@
+@use '../util/' as *;
+
+.client {
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__headline {
+        font-size: rem(12);
+        color: var(--gray);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        padding: rem(52) rem(37) rem(28) rem(52);
+    }
+
+    &__comment {
+        text-align: center;
+        padding: 0 2rem;
+        img {
+           margin: 2rem auto;
+            width: rem(59);
+            height: rem(59);
+            border-radius: 50%;
+        }
+
+    }
+
+    &__text {
+        color: var(--dark-grayish-blue);
+    }   
+
+    &__name {
+        padding: 2rem 0 0.7rem 0;
+    }
+
+    &__position {
+        color: var(--gray);
+        font-weight: lighter;
+        padding-bottom: rem(50);
+    }
+}
+
+@include breakpoint-up(medium) {
+    .client{
+        &__flex {
+            display: flex;
+            flex-direction: row;
+        }
+        &__headline {
+            font-size: rem(16);
+            letter-spacing: 3px;
+        }
+    
+        &__comment {
+            img {
+                width: rem(72);
+                height: rem(72);
+            }
+        }
+    
+        
+    }
+}

@@ -1,0 +1,42 @@
+@use '../util/' as *;
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@include breakpoint-up(medium) {
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .one{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    
+    .two {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    
+    .three {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    
+    .four {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    
+    .five {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    
+    .six {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+}

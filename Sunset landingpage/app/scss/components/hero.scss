@@ -1,24 +1,155 @@
 @use '../util/' as *;
 
 .hero {
-    display: grid;
-    grid-template-columns: 1fr;
-
     &__square {
         
         &-headline {
+            font-size: rem(22);
+            text-align: center;
+            padding: rem(55) 2rem 0 2rem;
+        }
+        &-design {
+            text-align: center;
+            padding: rem(300) 2rem 0 2rem;
+            font-size: rem(18);
+            color: var(--Dark-desaturated-cyan);
 
+            &-text {
+                text-align: center;
+                padding: rem(24);  
+                font-size: rem(15);
+                color: var(--Dark-desaturated-cyan);
+            }
+        }
+
+        &-photo {
+            text-align: center;
+            padding: rem(300) 2rem 0 2rem;
+            font-size: rem(18);
+            color: var(--Dark-blue);
+
+            &-text {
+                text-align: center;
+                padding: rem(24);
+                font-size: rem(15);
+                color: var(--Dark-blue);
+            }
         }
 
         &-text {
+            text-align: center;
+            padding: rem(24);
+            color: var(--gray);
+            font-size: rem(15);
+        }
 
+        a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            
         }
     }
 }
 
+.one{
+    background: url('/images/mobile/image-transform.jpg') center center / cover;
+    min-height: rem(247);
+}
+
+.two {
+    min-height: rem(345);
+}
+
+.three {
+    background: url('/images/mobile/image-stand-out.jpg') center center / cover;
+    min-height: rem(247);
+}
+
+.four {
+    min-height: rem(345);
+}
+
+.five {
+    background: url('/images/mobile/image-graphic-design.jpg') center center / cover;
+    min-height: rem(473);
+}
+
+.six {
+    background: url('/images/mobile/image-photography.jpg') center center / cover;
+    min-height: rem(473);
+}
+
 @include breakpoint-up(medium) {
     .hero {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+
+    }
+    .one{
+        background: url('/images/desktop/image-transform.jpg') center center / cover;
+    }
+    
+    .three {
+        background: url('/images/desktop/image-stand-out.jpg') center center / cover;
+    }
+    
+    .five {
+        background: url('/images/desktop/image-graphic-design.jpg') center center / cover;
+    }
+    
+    .six {
+        background: url('/images/desktop/image-photography.jpg') center center / cover;
+    }
+}
+
+@include breakpoint-up(large) {
+    .hero {
+        &__square {
+            min-height: rem(590);
+            padding: rem(150) rem(110) rem(130) rem(150);
+
+            &-headline {
+                font-size: rem(32);
+                text-align: left;
+                padding: rem(0) 2rem rem(45) 0;
+               
+            }
+            &-design {
+
+                padding: rem(300) 2rem 0 2rem;
+                font-size: rem(28);
+    
+                &-text {
+                    padding: 2rem rem(24) rem(24)  rem(24);  
+                    font-size: rem(17);
+                    line-height: 2;
+                }
+            }
+    
+            &-photo {
+
+                padding: rem(300) 2rem 0 2rem;
+                font-size: rem(28);
+    
+                &-text {
+                    padding: rem(24);
+                    font-size: rem(17);
+                    line-height: 2;
+                }
+            }
+    
+            &-text {
+                text-align: left;
+                padding: rem(24) rem(0) rem(45) 0;
+                font-size: rem(15);
+                line-height: 2;
+            }
+    
+            a {
+               
+               text-align: left; 
+            }
+        }
     }
 }
