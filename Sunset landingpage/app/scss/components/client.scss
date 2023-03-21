@@ -1,12 +1,6 @@
 @use '../util/' as *;
 
 .client {
-
-    &__flex {
-        display: flex;
-        flex-direction: column;
-    }
-
     &__headline {
         font-size: rem(12);
         color: var(--gray);
@@ -45,10 +39,6 @@
 
 @include breakpoint-up(medium) {
     .client{
-        &__flex {
-            display: flex;
-            flex-direction: row;
-        }
         &__headline {
             font-size: rem(16);
             letter-spacing: 3px;

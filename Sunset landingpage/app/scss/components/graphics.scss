@@ -1,0 +1,46 @@
+@use '../util/' as *;
+.graphics {
+    &__square {
+        height: rem(150);
+        width: 100%;
+    }
+    &__one {
+        background: url('/images/mobile/image-gallery-milkbottles.jpg') center center / cover;
+    }
+
+    &__two {
+        background: url('/images/mobile/image-gallery-orange.jpg') center center / cover;
+    }
+
+    &__three {
+        background: url('/images/mobile/image-gallery-cone.jpg') center center / cover;
+    }
+
+    &__four {
+        background: url('/images/mobile/image-gallery-sugar-cubes.jpg') center center / cover;
+    }
+}
+
+@include breakpoint-up(large) {
+    .graphics {
+        &__square {
+            height: rem(437);
+            width: 100%;
+        }
+        &__one {
+            background: url('/images/desktop/image-gallery-milkbottles.jpg') center center / cover;
+        }
+    
+        &__two {
+            background: url('/images/desktop/image-gallery-orange.jpg') center center / cover;
+        }
+    
+        &__three {
+            background: url('/images/desktop/image-gallery-cone.jpg') center center / cover;
+        }
+    
+        &__four {
+            background: url('/images/desktop/image-gallery-sugarcubes.jpg') center center / cover;
+        }
+    }
+}

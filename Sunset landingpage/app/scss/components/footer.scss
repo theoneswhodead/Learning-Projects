@@ -1,0 +1,46 @@
+@use '../util/' as *;
+
+.footer {
+
+    background: var(--footer);
+    &__logo {
+        text-align: center;
+        padding: rem(56) 0 2rem 0;
+        svg{
+            fill: #458c7e !important;
+
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding-bottom: rem(66);
+    }
+
+    &__nav-item {
+        color: var(--Dark-moderate);
+
+        &:hover {
+            cursor: pointer;
+            color: white;
+        }
+    }
+
+    &__socials {
+        padding: 0 rem(60) rem(60) rem(60);
+        
+        &-icon {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            color: var(--Dark-moderate);
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
