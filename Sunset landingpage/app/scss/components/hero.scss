@@ -1,0 +1,24 @@
+@use '../util/' as *;
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    &__square {
+        
+        &-headline {
+
+        }
+
+        &-text {
+
+        }
+    }
+}
+
+@include breakpoint-up(medium) {
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
