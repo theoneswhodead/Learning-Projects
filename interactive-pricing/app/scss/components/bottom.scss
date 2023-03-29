@@ -1,0 +1,37 @@
+@use '../util/' as *;
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: rem(20);
+    background: white;
+    border-radius: rem(20);
+    padding: rem(30) rem(90);
+
+    img {
+        display: block;
+    }
+    &__item {
+            display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    &__text {
+
+    }
+}
+
+button {
+    color: var(--Pale-Blue);
+    background: var(--Dark-Desaturated-Blue);
+    padding: 1rem 3rem;
+    border-radius: rem(30);
+    font-size: rem(12);
+
+    &:hover {
+        cursor: pointer;
+    }
+}

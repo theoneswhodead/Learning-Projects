@@ -1,0 +1,30 @@
+@use '../util/' as *;
+
+.header {
+    background: url('/images/bg-pattern.svg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__wrapper {
+
+        width: 370px;
+        position: relative;
+    }
+    &__pattern {
+        position: absolute;
+        top: 20%; 
+        left: 35%;
+    }
+
+    &__title {
+        padding: rem(95) rem(48) 1rem rem(48);
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__text {
+        font-size: rem(11);
+        text-align: center;
+        padding: 0px rem(100) rem(70) rem(100);
+    }
+}
