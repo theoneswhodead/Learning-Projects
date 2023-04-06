@@ -1,0 +1,55 @@
+.header {
+    background: rgb(255,143,112);
+    background: linear-gradient(90deg, rgba(255,143,112,1) 0%, rgba(255,61,84,1) 100%);
+    &__nav {
+        padding: 4rem 10.25rem; 
+        display: flex;
+       // 
+
+        &-container {
+            display: flex;
+            gap: 50px;
+            //width: 100%;
+            //
+            //align-items: center;
+        }
+        &-menu {
+            
+            &_button {
+                background: transparent;
+                border: none;
+                color: var(--White);
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &:hover ~ div { //js on click
+                    display: flex;
+                }
+            }
+            &_items {
+                background: #fff;
+                display: none;
+                border-radius: 6px;
+                padding: 1rem 2rem 1rem 1rem;
+                position: absolute;
+
+                flex-direction: column;
+
+                a {
+                    text-decoration: none;
+                    color: var(--Very-dark-blue);
+                    
+                    a:hover {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        
+    }
+    &__logo {
+        margin-right: 4rem;
+    }
+}
