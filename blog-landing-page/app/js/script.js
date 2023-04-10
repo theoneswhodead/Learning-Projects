@@ -3,6 +3,8 @@ let menuItems = document.querySelectorAll('.header__nav-menu_items');
 let hamburger = document.querySelector('.header__nav-hamburger');
 let navContainer = document.querySelector('.header__nav-container');
 let navLogin = document.querySelector('.header__nav-login');
+let open = document.querySelector('.hamburger-open');
+let close = document.querySelector('.hamburger-close');
 
 document.addEventListener('click', (e) => {
 
@@ -28,5 +30,7 @@ buttons.forEach((button, index) => {
 hamburger.addEventListener('click', () => {
     navContainer.classList.toggle('active'); 
     navLogin.classList.toggle('active');
+    open.classList.toggle('visible');
+    close.classList.toggle('visible');
 })
 

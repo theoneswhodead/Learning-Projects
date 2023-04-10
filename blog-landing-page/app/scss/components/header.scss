@@ -3,16 +3,11 @@
 .header {
     background: rgb(255,143,112);
     background: linear-gradient(90deg, rgba(255,143,112,1) 0%, rgba(255,61,84,1) 100%);
-
-
     border-bottom-left-radius: 70px;
-
 
     &__nav {
         padding: 4rem 10.25rem; 
         display: flex;
-       // flex-wrap: wrap;
-       // 
 
        &-hamburger {
             display: none;
@@ -21,9 +16,6 @@
         &-container {
             display: flex;
             gap: 50px;
-            //width: 100%;
-            //
-            //align-items: center;
         }
         &-menu {
             
@@ -35,7 +27,6 @@
 
                 &:hover {
                     cursor: pointer;
-                    //border-bottom: 1px solid var(--White);
 
                     &::after {
                         content: "";
@@ -47,10 +38,6 @@
                         background: var(--White);
                     }
                 }
-
-                // &:hover ~ div { //js on click
-                //     display: flex;
-                // }
             }
             &_items {
                 background: #fff;
@@ -59,8 +46,6 @@
                 padding: 1rem 3rem 1rem 1rem;
                 margin-top: 20px;
                 position: absolute;
-                //top: 60px;
-
                 flex-direction: column;
 
                 a {
@@ -75,17 +60,12 @@
         }
 
         &-login {
-            //display: flex;
             margin: 0 0 0 auto;
-            
-            
-
+        
             a {
                 text-decoration: none;
                 color: var(--White);
                 font-weight: bold;
-                
-
                 
                 &:last-child {
                     padding: 1rem 2.5rem; 
@@ -152,23 +132,21 @@
 
 }
 
-
 .active {
     display: flex !important;
 }
 
+.visible {
+    display: block !important;
+}
+.hamburger {
+    display: none;
+}
+
 @include breakpoint-down(large) {
     .header{
-
         &__nav {
             padding: 4rem 4rem; 
-            &-container {
-                
-            }
-
-            &-login{
-
-            }
         }
     }
 }
@@ -179,6 +157,7 @@
         &__nav {
             padding: 3rem 2.25rem;
             justify-content: space-between;
+            align-items: center;
             &-hamburger{
                 display: block;
 
@@ -192,9 +171,8 @@
                 background-color: #fff;
                 position: fixed;
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
-                inset: 2rem;
+                inset: 8rem 2rem 2rem 2rem;
 
             }
 
@@ -202,13 +180,33 @@
                 display: none;
                 position: fixed;
                 bottom: 100px;
+               left: 17%;
+                width: 65%;
+                flex-direction: column;
+                align-items: center;
+                border-top: 1px solid var(--Grayish-blue);
+                padding-top: 2rem;
                 a {
+                    
 
-
+                    color: var(--Very-dark-blue);
+                    letter-spacing: 1px;
+                    padding: 1rem 2.5rem;
+                    &:hover{
+                        color: var(--Light-red);
+                    }
                     &:last-child {
+                        margin-top: 1rem;
                         background: rgb(255,143,112);
                         background: linear-gradient(90deg, rgba(255,143,112,1) 0%, rgba(255,61,84,1) 100%);
                         color: var(--White);
+
+                        &:hover{
+                            margin-top: calc(1rem - 4px);
+                            color: var(--Light-red);
+                            background: var(--White);
+                            border: 2px solid var(--Light-red);
+                        }
                     }
                 }
                 
@@ -216,20 +214,31 @@
             }
             &-menu {
 
+                &:first-child {
+                    padding-top: 2rem;
+                }
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
                 &_button {
-                    color: #000;
+                    color: var(--Very-dark-blue);
+                    font-weight: bold;
     
                 }
                 &_items {
-                    background: #666;
-                    // display: none;
-                    // border-radius: 6px;
-                    // padding: 1rem 3rem 1rem 1rem;
-                    // margin-top: 20px;
-                    // position: absolute;
-    
-                    // flex-direction: column;
+                    background: var(--Grayish-blue);
+                    font-weight: bold;
+                    padding: 1rem 4.5rem;
+                    margin-top: 40px;
+                    position:unset;
+
+                    a {
+                        padding: 0.5rem;
+                    }
                 }
             }
         }
@@ -259,14 +268,8 @@
             padding: 34px 0 134px 0;
     
             a {
-               
                 padding: 1rem 1rem; 
-                
-    
-               
-    
             }
-    
         }
     }
 }
