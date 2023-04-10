@@ -1,0 +1,111 @@
+@use '../util/' as *;
+
+.future {
+
+
+    padding: rem(90) 0;
+
+    &__headline {
+        padding-bottom: rem(42);
+        text-align: center;
+        font-size: rem(20);
+        color: var(--Very-dark-blue);
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &-img {
+           
+
+            & img {
+                
+            }
+        }
+
+        &-text {
+            padding: 0 rem(32);
+            &_container {
+                padding-top: rem(42);
+                
+                text-align: center;
+
+                & h1 {
+                    color: var(--Very-dark-blue);
+                    padding-bottom: rem(24);
+                }
+
+                & p {
+                    color: var(--Very-dark-grayish-blu);
+                }
+            }
+        }
+    }
+}
+.hidden__desktop {
+    display: block;
+}
+
+.hidden__mobile {
+    display: none;
+}
+
+
+@include breakpoint-up(medium) {
+    .hidden__desktop {
+        display: none;
+    }
+
+    .hidden__mobile {
+        display: block;
+    }
+
+    .future {
+
+
+        // padding: rem(90) 0;
+    
+        &__headline {
+            // padding-bottom: rem(42);
+            // text-align: center;
+            // font-size: rem(20);
+            // color: var(--Very-dark-blue);
+        }
+    
+        &__wrapper {
+            // display: flex;
+            flex-direction: row-reverse;
+            
+
+            // justify-content: center;
+            // align-items: center;
+            &-img {
+               
+    
+                & img {
+                    
+                }
+            }
+    
+            &-text {
+                // padding: 0 rem(32);
+                &_container {
+                    // padding-top: rem(42);
+                    
+                    // text-align: center;
+    
+                    & h1 {
+                        // color: var(--Very-dark-blue);
+                        // padding-bottom: rem(24);
+                    }
+    
+                    & p {
+                        // color: var(--Very-dark-grayish-blu);
+                    }
+                }
+            }
+        }
+    }
+}
