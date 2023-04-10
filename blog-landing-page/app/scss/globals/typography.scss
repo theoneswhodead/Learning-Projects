@@ -5,3 +5,15 @@ h1 {
     font-size: rem(48);
     font-weight: bold;
 }
+
+@include breakpoint-down(small) { 
+
+    h1 {
+        font-size: rem(25);
+    }
+
+    h3 {
+        font-size: rem(14);
+    }
+
+}
