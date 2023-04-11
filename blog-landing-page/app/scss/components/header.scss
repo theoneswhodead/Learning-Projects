@@ -113,17 +113,20 @@
             &:hover{
                 color: var(--White);
                 background-color: var(--Very-light-redC);
+ 
             }
 
             &:last-child {
                 border: 1px solid var(--White);
                 color: var(--White);
                 background: transparent;
+                padding: 1rem 2.5rem;
 
                 &:hover{
                     color: var(--Light-red);
                     background-color: var(--White);
                     border: none;
+                    padding: 1rem calc(2.5rem + 1px);
                 }
             }
         }

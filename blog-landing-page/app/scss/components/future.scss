@@ -64,45 +64,82 @@
 
     .future {
 
-
+        position: relative;
+        overflow: hidden;
         // padding: rem(90) 0;
+        
     
         &__headline {
-            // padding-bottom: rem(42);
-            // text-align: center;
-            // font-size: rem(20);
-            // color: var(--Very-dark-blue);
+            font-size: rem(32);
         }
     
         &__wrapper {
             // display: flex;
             flex-direction: row-reverse;
+            padding-top: 3rem;
+            
+            
+            padding-bottom: 20rem;
+            
             
 
             // justify-content: center;
             // align-items: center;
             &-img {
                
-    
+                flex: 1;
+                
                 & img {
-                    
+                    height: 600px;
+                    bottom: 30%;
+                    position: absolute;
+                    z-index: 2;
+                   // width: 400px;
                 }
             }
     
             &-text {
-                // padding: 0 rem(32);
+                flex: 1;
                 &_container {
-                    // padding-top: rem(42);
-                    
-                    // text-align: center;
-    
                     & h1 {
-                        // color: var(--Very-dark-blue);
-                        // padding-bottom: rem(24);
+                        font-size: rem(24);
+                        text-align: left;
                     }
     
                     & p {
-                        // color: var(--Very-dark-grayish-blu);
+                        font-size: rem(14);
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint-up(large) { 
+    .future { 
+        &__headline {
+            font-size: rem(48);
+        }
+        &__wrapper { 
+            &-img {
+                & img {
+                    height: 880px;
+                    bottom: 10%;
+                }
+            }
+            &-text { 
+                padding: 0 rem(160);
+
+                &_container {
+                    & h1 {
+                        font-size: rem(32);
+                        text-align: left;
+                    }
+    
+                    & p {
+                        font-size: rem(20);
+                        text-align: left;
                     }
                 }
             }

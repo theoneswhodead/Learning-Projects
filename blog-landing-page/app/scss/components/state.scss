@@ -1,0 +1,37 @@
+@use '../util/' as *;
+
+
+.state {
+    margin-top: 5rem;
+    
+    
+    &__container {
+        text-align: center;
+        background: rgb(44,45,63);
+        background: linear-gradient(145deg, rgba(44,45,63,1) 0%, rgba(63,65,100,1) 100%);
+        border-bottom-left-radius: 70px;
+        border-top-right-radius: 70px;
+        padding: rem(200) rem(28) rem(80) rem(28);
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__phones {
+        position: absolute;
+        top: -110px;
+       // right: 50%;
+     //  transform: translate(10%);
+    }   
+
+    &__headline {
+        color: var(--White)
+    }
+
+    &__text {
+        color: var(--Grayish-blue);
+    }
+}
