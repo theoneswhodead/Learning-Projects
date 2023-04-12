@@ -4,8 +4,8 @@
 .state {
     margin-top: 5rem;
     
-    
     &__container {
+        
         text-align: center;
         background: rgb(44,45,63);
         background: linear-gradient(145deg, rgba(44,45,63,1) 0%, rgba(63,65,100,1) 100%);
@@ -21,17 +21,50 @@
     }
 
     &__phones {
+        background: url('/images/bg-pattern-circles.svg') center  center ;
+        background-size: cover;
+        max-width: 310px;
         position: absolute;
         top: -110px;
-       // right: 50%;
-     //  transform: translate(10%);
     }   
 
     &__headline {
-        color: var(--White)
+        color: var(--White);
+        font-size: rem(28);
+        margin-bottom: 1.5rem;
     }
 
     &__text {
         color: var(--Grayish-blue);
+        font-size: rem(16);
+    }
+}
+
+@include breakpoint-up(large) {
+    .state {
+         margin-top: 0;
+        
+        &__container {
+             padding: rem(120) rem(175) rem(105) rem(175);
+        }
+    
+        &__phones {
+             max-width: 500px;
+             top: -20%;
+             left: 5%;
+        }   
+    
+        &__headline {
+            font-size: rem(32);
+             margin-bottom: rem(40);
+             margin-left: 20rem;
+             max-width: 500px;
+        }
+    
+        &__text {
+            max-width: 500px;
+            text-align: left;
+            margin-left: 27rem;
+        }
     }
 }

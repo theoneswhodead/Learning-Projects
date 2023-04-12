@@ -173,6 +173,7 @@
                 display: none;
                 background-color: #fff;
                 position: fixed;
+                z-index: 1000;
                 flex-direction: column;
                 align-items: center;
                 inset: 8rem 2rem 2rem 2rem;
@@ -182,6 +183,7 @@
             &-login{
                 display: none;
                 position: fixed;
+                z-index: 1001;
                 bottom: 100px;
                left: 17%;
                 width: 65%;

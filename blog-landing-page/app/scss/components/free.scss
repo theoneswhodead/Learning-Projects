@@ -1,6 +1,6 @@
 @use '../util/' as *;
 
-.future {
+.free {
 
 
     padding: rem(90) 0;
@@ -62,26 +62,27 @@
         display: block;
     }
 
-    .future {
+    .free {
 
         position: relative;
         overflow: hidden;
-    
+
         &__headline {
             font-size: rem(32);
         }
     
         &__wrapper {
-            flex-direction: row-reverse;
+            flex-direction: row;
             padding-top: 3rem;
-            padding-bottom: 20rem;;
+            padding-bottom: 20rem;
             &-img {
                
                 flex: 1;
                 
                 & img {
-                    height: 600px;
+                    height: 500px;
                     bottom: 30%;
+                    left: -25%;
                     position: absolute;
                     z-index: 2;
                 }
@@ -106,15 +107,15 @@
 }
 
 @include breakpoint-up(large) { 
-    .future { 
+    .free { 
         &__headline {
             font-size: rem(48);
         }
         &__wrapper { 
             &-img {
                 & img {
-                    height: 880px;
-                    bottom: 10%;
+                    height: 700px;
+                    bottom: 20%;
                 }
             }
             &-text { 

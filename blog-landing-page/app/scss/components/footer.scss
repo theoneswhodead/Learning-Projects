@@ -1,0 +1,58 @@
+@use '../util/' as *;
+ .footer {
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 5rem;
+
+        background: var(--Very-dark-black-blue);
+        &-container {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &-menu {
+
+            &_button {
+                color: var(--White);
+                background: none;
+                border: none;
+                font-weight: bold;
+                padding: 2rem 0;
+            }
+            &_items {
+                display: flex;
+                 flex-direction: column;
+                 text-align: center;
+                & a {
+                    color: var(--Grayish-blue);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        margin-bottom: 3rem;
+    }
+ }
+
+
+ @include breakpoint-up(medium) {
+    .footer {
+        &__nav {
+            flex-direction: row;
+             align-items: flex-start;
+            &-container {
+                width: 80%;
+                flex-direction: row;
+                 justify-content: space-around;
+            }
+
+        }
+     }
+ }
