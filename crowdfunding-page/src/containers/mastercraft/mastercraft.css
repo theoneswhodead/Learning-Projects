@@ -1,0 +1,33 @@
+.mc {
+    background: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.mc img {
+    height: 58px;
+    width: 58px;
+}
+
+.mc__title {
+
+}
+
+.mc__text {
+
+}
+
+.mc__buttons {
+
+}
+
+.mc__buttons-back {
+
+}
+
+.mc__buttons-bookmark {
+
+}

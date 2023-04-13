@@ -67,3 +67,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+.app {
+  background-color: #fafafa;
+}
