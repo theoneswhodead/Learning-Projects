@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Chat = () => {
+const Data = () => {
   return (
     <div>
-      chat
+      
     </div>
   )
 }
 
-export default Chat
+export default Data
