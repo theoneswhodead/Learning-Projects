@@ -1,33 +1,78 @@
 .mc {
-    background: #fff;
+    background: white;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 732px;
+    height: 270px;
+    position: relative;
     
 }
 
-.mc img {
+.mc__logo {
     height: 58px;
     width: 58px;
+    position: absolute;
+    top: -10%;
+    transform: translate(-50% -50%);
 }
 
 .mc__title {
-
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 64px;
+    padding-bottom: 20px;
 }
 
 .mc__text {
-
+    padding-bottom: 35px;
+    color: #666;
 }
 
 .mc__buttons {
-
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .mc__buttons-back {
-
+    padding: 18px 42px;
+    background: var(--Dark-cyan);
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .mc__buttons-bookmark {
+    display: flex;
+    /* background: url('../../images/icon-bookmark.svg'); */
+    /* filter: invert(40%) sepia(11%) saturate(2543%) hue-rotate(127deg) brightness(94%) contrast(94%); */
+    /* background-repeat: no-repeat;
+ 
+    width: 190px;
 
+    
+
+    padding-left: 20px;
+    */
+    justify-content: space-between;
+    font-size: 16px;
+    text-align: center;
+    background-color: #eee;
+    border-radius: 50px;
+    width: 190px;
+    /* padding: 0 20px; */
+    cursor: pointer;
+
+}
+.mc__buttons-bookmark button {
+    color: #777;
+     
+    background: transparent;
+    font-weight: bold;
+    border: none;
+    padding-right: 20px;
 }
