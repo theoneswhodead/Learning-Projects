@@ -1,0 +1,31 @@
+.about {
+    margin-top: 28px;
+    display: flex;
+    width: 732px;
+    background-color: white;
+    align-items: center;
+    /* justify-content: space-around; */
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+    flex-wrap: wrap;
+    border-radius: 15px;
+    padding: 48px;
+}
+
+.about__title {
+    font-size: 19px;
+    font-weight: bold;
+    padding-bottom: 48px 
+}
+
+.about__text {
+    padding-bottom: 38px;
+    font-size: 13px;
+}
+
+@media (max-width: 750px) { 
+    .about {
+        width: 328px;
+        padding: 24px;
+    }
+
+}

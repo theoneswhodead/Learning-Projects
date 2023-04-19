@@ -34,7 +34,7 @@
         padding: 36px 24px; 
     }
     .nav__logo {
-     z-index: 1;
+     z-index: 2;
     }
     
     .nav__menu {
@@ -49,8 +49,9 @@
         background-color: #fff;
         flex-direction: column;
         position: fixed;
-        inset: 6rem 2rem 37rem 2rem;
+        inset: 6rem 2rem 34rem 2rem;
         border-radius: 10px;
+        z-index: 2;
     }
     
     .nav__menu-items_item {
@@ -72,7 +73,7 @@
         cursor: pointer;
         width: 18px;
         height: 18px;
-        z-index: 1;
+        z-index: 2;
     }
     
     .overlay {
@@ -81,7 +82,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 0;
+        z-index: 1;
         background: rgba(0,0,0,0.1);
         box-shadow: inset 30px 30px 100px #000000,
         inset -30px -40px 100px #000000;

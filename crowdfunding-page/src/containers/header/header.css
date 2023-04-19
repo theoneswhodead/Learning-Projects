@@ -4,3 +4,10 @@
     height: 400px;
     width: 100%;
 }
+
+@media (max-width: 600px) {
+    .header {
+     height: 245px;
+     object-fit: cover;
+    }
+}

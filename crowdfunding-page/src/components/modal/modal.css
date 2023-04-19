@@ -1,0 +1,35 @@
+.modal {
+    position: fixed;
+    top: 5%;
+    width: 732px;
+    height: 100%;
+    background-color: white;
+    color: black;
+    z-index: 1;
+    padding: 3rem;
+    border-radius: 10px;
+    padding-top: 2rem;
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.modal__close {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.modal__title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.modal__text {
+    margin-bottom: 2em;
+    font-size: 13px;
+}

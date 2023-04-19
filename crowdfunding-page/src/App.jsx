@@ -1,6 +1,6 @@
 
 import './App.css'
-import { Header, Mastercraft } from './containers';
+import { Header, Mastercraft, Data, About } from './containers';
 
 function App() {
 
@@ -8,6 +8,8 @@ function App() {
     <div className="App">
       <Header />
       <Mastercraft />
+      <Data />
+      <About/>
     </div>
   )
 }

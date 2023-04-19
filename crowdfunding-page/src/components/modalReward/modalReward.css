@@ -1,49 +1,55 @@
-.reward {
+.modal__reward {
     padding: 32px;
     border: 2px solid #ccc;
     border-radius: 10px;
     margin-bottom: 24px;
 }
 
-.reward:last-child {
+.modal__reward:last-child {
     filter: grayscale(90%);
 }
 
-.reward__headline {
+.modal__reward__headline {
    display: flex;
    justify-content: space-between; 
-   padding-bottom: 2rem;
+   
 }
+.modal__reward__headline-r {
+    display: flex;
+    /* justify-content: space-between;  */
+    
+ }
 
-.reward__title {
+.modal__reward__title {
     font-size: 16px;
     font-weight:bold ;
+   padding: 0 2rem;
 }
 
-.reward__price {
+.modal__reward__price {
     color: var(--Moderate-cyan);
     font-size: 14px;
     font-weight: bold;
+    
 }
 
-.reward__text {
+.modal__reward__text {
     font-size: 13px;
     color: #777;
     line-height: 1.5;
-    padding-bottom: 2rem;
 }
 
-.reward__left {
+.modal__reward__left {
     font-size: 26px;
     font-weight: bold;
 }
 
-.reward__footer {
+.modal__reward__footer {
     display: flex;
     justify-content: space-between; 
 }
 
-.button {
+.modal__button {
     font-size: 14px;
     color: white;
     padding: 1rem 2rem;
@@ -53,29 +59,29 @@
     cursor: pointer;
     /*  */
 }
-.button:hover {
+.modal__button:hover {
     background-color: var(--Dark-cyan);
 }
 
 @media (max-width: 750px) {
-    .reward__headline {
+    .modal__reward__headline {
         display: flex;
         justify-content: normal; 
         padding-bottom: 2rem;
         flex-direction: column;
      }
 
-     .reward__footer {
+     .modal__reward__footer {
         display: flex;
         justify-content: normal; 
         flex-direction: column;
     }
 
-    .reward__text {
+    .modal__reward__text {
         line-height: 1.2;
     }
 
-    .button {
+    .modal__button {
         margin-top: 1rem;
         max-width: 80%;
     }
