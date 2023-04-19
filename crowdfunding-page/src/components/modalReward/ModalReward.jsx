@@ -1,12 +1,25 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import './modalReward.css'
 
-const reward = ({title, price, text, left, button}) => {
+const Button = ({text, handler}) => (
+  <button className='button' onClick={handler}>{text}</button>
+)
+
+const ModalReward = ({title, price, text, left, button, handler}) => {
+
+  const [form, setForm] = useState(false);
+
+  useEffect(() => {
+    console.log(form)
+  },[form])
   return (
-    <div className='modal__reward'>
+    <div className={form ? 'modal__reward-change'  :  'modal__reward'}>
         <div className='modal__reward__headline'>
         <div className='modal__reward__headline-r'>
-        <input type="radio" id="sel"/>
+        <input type="checkbox" id="sel" checked={form} 
+        onChange={() => setForm(prev => !prev)}
+
+        />
         <label htmlFor="sel"></label>
 
           <h1 className='modal__reward__title'>{title}</h1>
@@ -17,12 +30,14 @@ const reward = ({title, price, text, left, button}) => {
         <div>
           <p className='modal__reward__text'>{text}</p>
         </div>
-        <div className='modal__reward__footer'>
-          
+        {form && left &&<div className='modal__reward__footer'>
+          <p className='modal__reward__footer-text'>Enter your pladge</p>
+          <input className='modal__reward__footer-input' type="number" placeholder='$'/>
+           <Button text="Continue" handler={handler}/>
          
-        </div>
+        </div>}
     </div>
   )
 }
 
-export default reward
+export default ModalReward

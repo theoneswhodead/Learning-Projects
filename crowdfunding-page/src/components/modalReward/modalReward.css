@@ -5,6 +5,13 @@
     margin-bottom: 24px;
 }
 
+.modal__reward-change {
+    border: 2px solid var(--Moderate-cyan);
+    border-radius: 10px;
+    margin-bottom: 24px;
+    padding: 32px;
+}
+
 .modal__reward:last-child {
     filter: grayscale(90%);
 }
@@ -47,6 +54,30 @@
 .modal__reward__footer {
     display: flex;
     justify-content: space-between; 
+    padding-top: 2rem;
+    margin-top: 1rem;
+    border-top: 2px solid #ccc;
+    align-items: center;
+}
+
+.modal__reward__footer-text {
+    color: #999;
+    width: 50%;
+}
+
+.modal__reward__footer-input {
+    border-radius: 25px;
+    border: 2px solid #ccc;
+    width: 8rem;
+    height: 3rem;
+    font-weight: bold;
+    color: #ccc;
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.modal__reward__footer-input::placeholder {
+    color: #ccc;
 }
 
 .modal__button {
