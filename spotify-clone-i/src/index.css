@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root {
   --black-100: #000000;
   --black-200: rgba(0,0,0,0.7);
@@ -6,10 +7,13 @@
 
   --dark-gray: #121212;
   --dark-blue: #18181c;
+  --light-gray: #bfbfbf;
 
   --gray: #292929;
   --white: #ffffff;
   --green: #65d36e;
+
+  --bg: #1f1f1f;
 }
 
 /* Box sizing rules */
@@ -43,6 +47,7 @@ html,body {
 body {
 text-rendering: optimizeSpeed;
 line-height: 1.5;
+font-family: 'Roboto', sans-serif;
 }
 
 /* A elements that don't have a class get default styles */

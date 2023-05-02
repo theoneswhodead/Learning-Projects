@@ -1,3 +1,49 @@
 .navbar {
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--black-300);
+    height: 84px;
+}
+.navbar__nav {
+    display: flex;
+    margin: 19px 0 19px 50px;
+    gap: 20px;
+    
+}
+.navbar__nav-icon {
+    height: 46px;
+    width: 46px;
+   
+}
+
+.navbar__user {
+    display: flex;
+    align-items: center;
+    background-color: var(--black-200);
+    border-radius: 50px;
+    height: 44px;
+    width: 177px;
+    margin: 24px 50px 20px 0;
+}
+
+.navbar__user-avatar {
+    margin-left: 3px;
+    border-radius: 50%;
+}
+
+.navbar__user-name {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 12px;
+}
+
+@media(max-width: 800px) {
+    .hide-for-mobile {
+        display: none;
+    }
+
+    .navbar__nav {
+        margin: 19px 0 19px 16px;     
+    }
 }

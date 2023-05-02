@@ -6,8 +6,12 @@ const Header = () => {
   return (
     <header className='header'>
       <Navbar />
-      <h1>asdasd</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, aperiam?</p>
+      <div className='header__playlist'>
+        <p className='header__playlist-text'>Playlist</p>
+        <h1 className='header__playlist-title'>Top songs of the world</h1>
+        <p className='header__playlist-text'>Popular songs of Dua Lipa and many many others</p>
+      </div>
+
     </header>
   )
 }

@@ -2,7 +2,56 @@
     background: url('../../../assets/images/woman-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 
-    height: 400px;
+    height: 434px;
+}
+
+.header__playlist {
+   padding: 150px 24px 32px 32px
+}
+
+.header__playlist-title {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--white);
+    width: 243px;
+    padding: 1rem 0;
+}
+
+.header__playlist-text {
+    font-size: 1rem;
+    letter-spacing: -0.04em;
+    color: var(--light-gray);
+}
+
+@media (min-width: 680px) {
+    .header {
+        background: url('../../../assets/images/woman-bg-desktop.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .header__playlist {
+        padding: 70px 0 50px 50px
+     }
+
+    .header__playlist-title {
+        font-size: 68px;
+        width: 338px;
+    }
+
+    .header__playlist-text {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .header {
+        background-size: cover;
+        background-position: center;
+    }
+
 
 }

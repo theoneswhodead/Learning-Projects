@@ -1,0 +1,18 @@
+.play {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 24px 0 24px 15px
+}
+.play-play {
+    height: 55px;
+    width: 55px;
+}
+.play-heart {
+    height: 26px;
+    width: 26px;
+}
+.play-menu {
+    height: 46px;
+    width: 46px;
+}
