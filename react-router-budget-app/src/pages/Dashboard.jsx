@@ -1,11 +1,12 @@
 import React from 'react'
 //helper functions
-import { createBudget, fetchData } from '../helpers'
+import { createBudget, fetchData, wait } from '../helpers'
 import { useLoaderData } from 'react-router-dom';
 import Intro from '../components/Intro';
 
 import { toast } from 'react-toastify';
 import AddBudgetForm from '../components/AddBudgetForm';
+import AddExpenseForm from '../components/AddExpenseForm';
 
 //loader
 export function dashboardLoader() {
@@ -17,6 +18,9 @@ export function dashboardLoader() {
 //action
 
 export async function dashboardAction({request}) {
+
+  await wait() 
+
     const data = await request.formData();
     const {_action, ...values} = Object.fromEntries(data);
 
@@ -55,12 +59,27 @@ const Dashboard = () => {
             <h1>Welcome back,
             <span className='accent'>{userName}</span></h1>
             <div className="grid-sm">
+
               {/* {budgets ? () : ()} */}
-              <div className="grid-lg">
-                <div className="flex-lg">
-                  <AddBudgetForm/>
-                </div>
-              </div>
+              {
+                budgets && budgets.length > 0
+                ? (
+                  <div className="grid-lg">
+                    <div className="flex-lg">
+                     <AddBudgetForm/>
+                     <AddExpenseForm />
+                    </div>
+                  </div>
+                )
+                : (
+                  <div className="grid-sm">
+                    <p>Personal budgeting is the secret to financial freedom.</p>
+                    <p>Create a budget to get started!</p>
+                    <AddBudgetForm budgets={budgets}/>
+                  </div>
+                )
+              }
+              
             </div>
           </div>
           ) : (<Intro />)}
