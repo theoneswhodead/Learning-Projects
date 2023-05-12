@@ -1,0 +1,43 @@
+.song {
+    background-color: var(--dark-blue);
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    margin: 16px;
+    padding: 16px;
+    /* justify-content: space-evenly; */
+    position: relative;
+
+}
+
+.song__id {
+    color: var(--white);
+    margin-left: 8px;
+}
+
+.song__img {
+    border-radius: 7px;
+    height: 56px;
+    width: 56px;
+    margin: 0 24px;
+}
+
+.song__name {
+    /* width: 100%; */
+}
+
+.song__name-artist {
+    color: var(--light-gray);
+    font-size: 12px;
+}
+
+.song__name-song {
+    color: var(--white);
+    font-size: 16px;
+}
+
+.song__menu {
+    position: absolute;
+    right: 14px;
+    /* top: 0; */
+}

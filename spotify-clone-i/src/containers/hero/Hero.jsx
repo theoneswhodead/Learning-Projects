@@ -7,6 +7,8 @@ const Hero = () => {
     <div className='hero'>
       <Play />
       <Song />
+      <Song />
+      <Song />
       
     </div>
   )
