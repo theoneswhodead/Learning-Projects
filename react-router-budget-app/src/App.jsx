@@ -3,25 +3,24 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-//lib
-
-import { ToastContainer, } from 'react-toastify';
+// Library
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// Layouts
+import Main, { mainLoader } from "./layouts/Main";
+
+// Actions
+import { logoutAction } from "./actions/logout";
 
 // Routes
 import Dashboard, { dashboardAction, dashboardLoader } from "./pages/Dashboard";
 import Error from "./pages/Error";
-//Layouts
-import Main, { mainLoader } from "./layouts/Main";
-
-//Actions
-import { logoutAction } from "./actions/logout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main/>,
+    element: <Main />,
     loader: mainLoader,
     errorElement: <Error />,
     children: [
@@ -33,12 +32,11 @@ const router = createBrowserRouter([
         errorElement: <Error />
       },
       {
-        path: 'logout',
+        path: "logout",
         action: logoutAction
       }
     ]
   },
-
 ]);
 
 function App() {

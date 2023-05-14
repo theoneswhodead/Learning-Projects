@@ -1,63 +1,72 @@
-import { CurrencyDollarIcon } from '@heroicons/react/24/solid'
-import React, { useRef, useEffect } from 'react'
-import { Form, useFetcher } from 'react-router-dom'
+// reacts
+import { useEffect, useRef } from "react";
+
+// rrd imports
+import { Form, useFetcher } from "react-router-dom"
+
+// library imports
+import { CurrencyDollarIcon } from "@heroicons/react/24/solid"
 
 const AddBudgetForm = () => {
-
   const fetcher = useFetcher();
-  const isSubmiting = fetcher.state === "submitting"
+  const isSubmitting = fetcher.state === "submitting"
 
   const formRef = useRef();
   const focusRef = useRef();
 
   useEffect(() => {
-    if(!isSubmiting) {
+    if (!isSubmitting) {
       formRef.current.reset()
       focusRef.current.focus()
     }
-  }, [isSubmiting])
-
+  }, [isSubmitting])
 
   return (
-    <div className='form-wrapper'>
-      <h2 className='h3'>
-        Create Budget
+    <div className="form-wrapper">
+      <h2 className="h3">
+        Create budget
       </h2>
-      <fetcher.Form 
+      <fetcher.Form
         method="post"
-        className='grid-sm'
+        className="grid-sm"
         ref={formRef}
       >
         <div className="grid-xs">
           <label htmlFor="newBudget">Budget Name</label>
-          <input type="text" name="newBudget" id='newBudget'
-            placeholder='e.g., Groceries' required ref={focusRef}
+          <input
+            type="text"
+            name="newBudget"
+            id="newBudget"
+            placeholder="e.g., Groceries"
+            required
+            ref={focusRef}
           />
         </div>
         <div className="grid-xs">
-          <label htmlFor="newBudgetAmout">Amout</label>
-          <input type="number" step="0.01" name="newBudgetAmout" placeholder='e.g., $350'
+          <label htmlFor="newBudgetAmount">Amount</label>
+          <input
+            type="number"
+            step="0.01"
+            name="newBudgetAmount"
+            id="newBudgetAmount"
+            placeholder="e.g., $350"
             required
-            inputMode='decimal'
+            inputMode="decimal"
           />
         </div>
-        <input type="hidden" name="_action" value="create Budget"/>
-        <button type='submit' className='btn btn-dark' disabled={isSubmiting}>
-
+        <input type="hidden" name="_action" value="createBudget" />
+        <button type="submit" className="btn btn--dark" disabled={isSubmitting}>
           {
-
-            isSubmiting ? <span>Creating budget...</span> : (
+            isSubmitting ? <span>Submitting…</span> : (
               <>
-                 <span>Create Budget</span> <CurrencyDollarIcon width={20}/>
+                <span>Create budget</span>
+                <CurrencyDollarIcon width={20} />
               </>
-)
-
+            )
           }
-
         </button>
       </fetcher.Form>
     </div>
   )
 }
-
 export default AddBudgetForm
