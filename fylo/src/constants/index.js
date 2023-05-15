@@ -1,33 +1,33 @@
-// Features
-//   Team
-//   Sign In
+import {access, security, collaboration, store } from '../../images';
 
-//   All your files in one secure location, accessible anywhere.
 
-//   Fylo stores all your most important files in one secure location. Access them wherever 
-//   you need, share and collaborate with friends family, and co-workers.
-
-//   Get Started
-
-//   Access your files, anywhere
-
-//   The ability to use a smartphone, tablet, or computer to access your account means your 
-//   files follow you everywhere.
-
-//   Security you can trust
-
-//   2-factor authentication and user-controlled encryption are just a couple of the security 
-//   features we allow to help secure your files.
-
-//   Real-time collaboration
-
-//   Securely share files and folders with friends, family and colleagues for live collaboration. 
-//   No email attachments required.
-
-//   Store any type of file
-
-//   Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all 
-//   file types to be securely stored and shared.
+export const infoo = [
+    {
+        id: 1,
+        img: access,
+        title: 'Access your files, anywhere',
+        text: 'The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.'
+    },
+    {
+        id: 2,
+        img: security,
+        title: 'Security you can trust',
+        text: '2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.'
+    },
+    {
+        id: 3,
+        img: collaboration,
+        title: 'Real-time collaboration',
+        text: 'Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.'
+    },
+    {
+        id: 4,
+        img: store,
+        title: 'Store any type of file',
+        text: "Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared."
+    },
+];
+ 
 
 //   Stay productive, wherever you are
 

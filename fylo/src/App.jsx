@@ -1,10 +1,13 @@
 import React from 'react'
+import { Nav } from './components'
+import { Main, Started } from './containers'
 
 const App = () => {
   return (
-    <div className='bg-intro w-full overflow-hidden'>
-      <h1>Hello World</h1>
-      
+    <div>
+      <Nav />
+      <Started />
+      <Main />
     </div>
   )
 }

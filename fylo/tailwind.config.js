@@ -15,11 +15,12 @@ module.exports = {
         white: "hsl(0, 0%, 100%)"
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
+        raleway: ['Raleway', 'sans-serif'],
+        sans: ['Open Sans', 'sans-serif']
       },
     },
     screens: {
-      xs: "480px",
+      xs: "430px",
       ss: "620px",
       sm: "768px",
       md: "1060px",

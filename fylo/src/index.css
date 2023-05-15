@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.test {
+  color: hsl(217, 28%, 15%) 
+} 
 /* :root {
   --black-gradient: linear-gradient(
     144.39deg,
