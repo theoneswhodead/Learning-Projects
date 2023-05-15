@@ -2,17 +2,29 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    padding: 24px 0 24px 15px
+    padding: 24px 0 24px 15px;
+    position: relative;
 }
 .play-play {
     height: 55px;
     width: 55px;
 }
+
+.play-play:hover {
+    cursor: pointer;
+}
 .play-heart {
     height: 26px;
     width: 26px;
 }
+.play-heart {
+    cursor: pointer;
+}
 .play-menu {
     height: 46px;
     width: 46px;
+}
+
+.play-menu:hover {
+    cursor: pointer;
 }

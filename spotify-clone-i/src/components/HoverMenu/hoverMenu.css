@@ -1,0 +1,35 @@
+.hoverMenu {
+    position: absolute;
+    height: 368px;
+    width: 248px;
+    background-color: var(--gray);
+    color: var(--white);
+    padding: 0 2rem;
+    border-radius: 8px;
+    
+}
+
+.hoverMenu__text{
+    font-size: 14px;
+    /* padding-bottom: 13px; */
+    padding: 8px 0 8px 1rem;
+}
+
+.hoverMenu__text:first-child {
+    margin-top: 2rem;
+}
+.hoverMenu__text:hover {
+    cursor: pointer;
+    background-color: var(--light-gray-100);
+    border-radius: 8px;
+}
+/* 
+.hoverMenu__text:hover ~ .hoverMenu__text__underline {
+    cursor: pointer;
+    background-color: var(--light-gray-100);
+    border-radius: 8px;
+} */
+
+.hoverMenu__text__underline {
+    border-bottom: 2px solid var(--light-gray-100);
+}

@@ -15,15 +15,24 @@
     width: 46px;
    
 }
+.navbar__nav-icon:hover {
+    cursor: pointer;
+}
 
 .navbar__user {
     display: flex;
     align-items: center;
-    background-color: var(--black-200);
+    background-color: var(--black-300);
     border-radius: 50px;
     height: 44px;
     width: 177px;
     margin: 24px 50px 20px 0;
+}
+
+.navbar__user:hover {
+    background-color: var(--black-100) ;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.05);
 }
 
 .navbar__user-avatar {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Hero}from './containers';
+import { Header, Hero, Footer}from './containers';
 
 
 const App = () => {
@@ -7,6 +7,7 @@ const App = () => {
     <div className='app'>
         <Header />
         <Hero />
+        <Footer />
     </div>
   )
 }

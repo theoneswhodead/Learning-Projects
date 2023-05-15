@@ -5,14 +5,56 @@
     align-items: center;
     margin: 16px;
     padding: 16px;
-    /* justify-content: space-evenly; */
-    position: relative;
+   justify-content: space-between;
+}
 
+.song:hover {
+    background-color: var(--gray);
+    cursor: pointer;
+}
+
+.song__play {
+    display:none;
+    height: 18px;
+    width: 20px;
+    
+}
+
+.song:hover > .song__wrapper > .song__play {
+    display: block;
+}
+
+.song:hover > .song__wrapper > .song__id {
+    display: none;
+}
+
+.song__play-active {
+    display: block;
+}
+
+.song__id-active {
+    display: none;
+}
+
+.song-active {
+    background-color: var(--light-gray-100);
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    margin: 16px;
+    padding: 16px;
+   justify-content: space-between;
+}
+
+.song__wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .song__id {
     color: var(--white);
     margin-left: 8px;
+    padding-right: 0.19rem;
 }
 
 .song__img {
@@ -26,18 +68,74 @@
     /* width: 100%; */
 }
 
-.song__name-artist {
+.song__name-h3 {
     color: var(--light-gray);
     font-size: 12px;
 }
 
-.song__name-song {
+.song__name-h2 {
     color: var(--white);
     font-size: 16px;
 }
 
+.song__artist {
+    display: none;
+    width: 200px
+  
+}
+
+.song__time {
+    display: none;
+}
+
 .song__menu {
-    position: absolute;
+    display: flex;
+    align-items: center;
     right: 14px;
-    /* top: 0; */
+    position: relative;
+}
+
+.song__menu-like {
+    display: none;
+}
+.song:hover > .song__menu > .song__menu-like {
+   display: block;
+}
+
+
+
+@media (min-width: 680px) {
+    .song {
+        justify-content: space-between;
+    }
+    .song__artist {
+        display: block;
+    }
+    .song__name {
+        width: 100px;
+    }
+    .song__menu-like {
+        opacity: 0;
+        display: block;
+        margin-right: 1.5rem;
+    }
+    .song:hover > .song__menu > .song__menu-like {
+        opacity: 1;
+    }
+
+}
+
+@media (min-width: 1300px) {
+    .song__time {
+        display: block;
+    }
+
+    .song {
+        padding: 16px 50px;
+    }
+
+    .song-active {
+        padding: 16px 50px;
+    }
+
 }
