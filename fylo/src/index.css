@@ -5,8 +5,15 @@
 @tailwind utilities;
 
 .test {
-  color: hsl(217, 28%, 15%) 
+  color: hsl(217, 28%, 15%);
+  color: hsl(219, 30%, 18%);
 } 
+
+.section__padding {
+  padding-bottom: 130px;
+}
+
+
 /* :root {
   --black-gradient: linear-gradient(
     144.39deg,
