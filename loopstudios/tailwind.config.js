@@ -4,14 +4,19 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-mobile': "url('./images/mobile/image-hero.jpg')",
+        'hero-desktop': "url('./images/desktop/image-hero.jpg)",
+      },
       colors: {
-        primary: "#00040f",
-        secondary: "#00f6ff",
-        dimWhite: "rgba(255, 255, 255, 0.7)",
-        dimBlue: "rgba(9, 151, 124, 0.1)",
+        white: "hsl(0, 0%, 100%)",
+        black: "hsl(0, 0%, 0%)",
+        gray: "hsl(0, 0%, 55%)",
+        darkGray: "hsl(0, 0%, 41%)",
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
+        alata: ["Alata", "sans-serif"],
+        josefin: ["Josefin Sans", "sans-serif"],
       },
     },
     screens: {
