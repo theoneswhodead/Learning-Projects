@@ -12,6 +12,13 @@ export const fetchData = (key) => {
   return JSON.parse(localStorage.getItem(key));
 };
 
+//Get all Ittems ffrom lacal storage
+
+export const getAllMatchingItems = ({category, key, value}) => {
+  const data = fetchData(category) ?? [];
+  return data.filter((item) => item[key] === value);
+}
+
 // create budget
 export const createBudget = ({
   name, amount
@@ -65,6 +72,8 @@ export const calculateSpentByBudget = (budgetId) => {
     return budgetSpent;
 }
 /// formatting
+
+export const formatDateToLocaleString = (epoch) => new Date(epoch).toLocaleDateString();
 
 //percentages
 
