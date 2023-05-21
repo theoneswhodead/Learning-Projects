@@ -12,7 +12,7 @@ import BudgetItem from "../components/BudgetItem";
 import Table from "../components/Table";
 
 //  helper functions
-import { createBudget, createExpense, fetchData, waait } from "../helpers"
+import { createBudget, createExpense, fetchData, waait, deleteItem } from "../helpers"
 
 // loader
 export function dashboardLoader() {
@@ -66,14 +66,13 @@ export async function dashboardAction({ request }) {
 
   if (_action === "deleteExpense") {
     try {
-      createExpense({
-        name: values.newExpense,
-        amount: values.newExpenseAmount,
-        budgetId: values.newExpenseBudget
+      deleteItem({
+        key: 'expenses',
+        id: values.expenseId
       })
-      return toast.success(`Expense ${values.newExpense} created!`)
+      return toast.success(`Expense deleted!`)
     } catch (e) {
-      throw new Error("There was a problem creating your expense.")
+      throw new Error("There was a problem deleting your expense.")
     }
   }
 }
