@@ -6,6 +6,8 @@ import { useLocation } from 'react-router-dom'
 import { Hero } from '../containers'
 import { Outlet } from 'react-router-dom'
 
+import { Nav } from '../components'
+
 import 
 {
     HomeDesktopBackground,
@@ -93,11 +95,11 @@ const RootLayout = () => {
 
 
   return (
-    <div className={` pb-[1000px] bg-cover bg-center`}
+    <div className={` bg-cover bg-center h-[100vh] sm:h-[120vh]`} 
     style={{
         backgroundImage: `url(${imageUrl})` //eval is bad
     }}>
-        <Hero />
+        <Nav />
         <main>
             <Outlet />
         </main>

@@ -2,7 +2,11 @@ import React from 'react'
 //rrd
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 // Layouts
-import RootLayout from './Layouts/RootLayout'
+import { RootLayout} from './Layouts';
+
+
+//pages
+import { Hero, Crew, Technology, Destination } from './containers';
 
 const router = createBrowserRouter([
   {
@@ -11,16 +15,20 @@ const router = createBrowserRouter([
 
     children: [
       {
+        path: '/',
+        element: <Hero />
+      },
+      {
         path: 'destination',
-        element: "destination"
+        element: <Destination/>,
       },
       {
         path: 'crew',
-        element: "crew"
+        element: <Crew/>
       },
       {
         path: 'technology',
-        element: "technology"
+        element: <Technology />
       },
     ],
   },
@@ -29,7 +37,7 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <div className='bg-primary'>
+    <div className='bg-dark'>
         <RouterProvider router={router}/>
     </div>
   )

@@ -18,10 +18,6 @@ const Nav = () => {
             : ''
         }
         
-
-        
-        {/* <img src={close} alt="Close Menu" onClick={() => setIsActive((prev) => !prev)} /> */}
-   
          <div className='hidden sm:flex py-[39px] px-[46px] gap-[37px] w-[450px]  bg-dark_opacity backdrop-blur-[40.7742px] text-[14px] tracking-[2.36px] leading-[16.8px] md:w-[830px] md:justify-center md:mt-[40px]'>
          
              <NavLink to="/" className="menu-item flex">
@@ -51,10 +47,10 @@ const Nav = () => {
                  <NavLink to="destination">
                     <span className='font-bold mr-[12px]'>01</span>Destination
                 </NavLink>
-                 <NavLink to="mars">
+                 <NavLink to="crew">
                     <span className='font-bold mr-[12px]'>02</span>Crew
                  </NavLink>
-                 <NavLink to="mars">
+                 <NavLink to="technology">
                     <span className='font-bold mr-[12px]'>03</span>Technology
                  </NavLink>
                 </div>

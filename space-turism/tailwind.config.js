@@ -9,6 +9,8 @@ module.exports = {
         dark_opacity: 'rgba(255, 255, 255, 0.04)',
         light: "#D0D6F9",
         white: "#ffffff",
+        gray: "#383B4B",
+        role: '#909296',
       },
       fontFamily: {
         barlow: ["Barlow", "sans-serif"],
