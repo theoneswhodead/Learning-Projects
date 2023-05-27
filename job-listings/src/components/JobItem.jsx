@@ -1,4 +1,6 @@
 import React from 'react'
+
+import { Tech } from '../components';
 //import LOGO from '../../images/photosnap.svg'
 // const data = {
 //     "id": 1,
@@ -17,15 +19,27 @@ import React from 'react'
 //   }
 
 
-const Tech = ({text}) => {
-  return (
-    <div className='bg-background text-dark_cyan p-[10px] text-[12px] font-bold rounded-md'>
-      {text}
-    </div>
-  )
-}
 
-const JobItem = ({data}) => {
+
+const JobItem = ({data, setIsActive} ) => {
+
+  // const {
+  //   company,
+  //   logo,
+  //   featured,
+  //   position,
+  //   role,
+  //   level,
+  //   postedAt,
+  //   contract,
+  //   location,
+  //   languages,
+  //   tools,
+  // } = data.data;
+
+  // let keywords = [role, level, ...languages, ...tools]
+
+  // console.log(data);
   return (
     <div className='flex justify-center '>
      
@@ -53,13 +67,16 @@ const JobItem = ({data}) => {
         <p className='text-grayish_cyan text-[15px] font-bold'>{data.postedAt} · {data.contract} · {data.location}</p>
       </div>
         <div className='my-[1rem] flex flex-wrap gap-[1rem]'>
-            <Tech text={data.role}/>
-            <Tech text={data.level}/>
+
+
+
+            <Tech text={data.role} setIsActive={setIsActive}/>
+            <Tech text={data.level} setIsActive={setIsActive}/>
             {
               data.languages.map((lang) => {
 
                 return (
-                  <Tech text={lang}/>
+                  <Tech text={lang} setIsActive={setIsActive}/>
                 )        
               })
             }
@@ -67,7 +84,7 @@ const JobItem = ({data}) => {
               data.tools.map((lang) => {
 
                 return (
-                  <Tech text={lang}/>
+                  <Tech text={lang} setIsActive={setIsActive}/>
                 )        
               })
             }
