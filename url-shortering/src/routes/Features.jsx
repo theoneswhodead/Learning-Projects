@@ -5,6 +5,7 @@ import { Header, Statistics, Boost, Footer } from '../containers'
 const Home = () => {
   return (
     <div>
+    Features
       <Header />
       <Statistics />
       <Boost />

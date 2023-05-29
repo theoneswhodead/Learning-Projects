@@ -4,40 +4,12 @@ import ShortedUrl from './ShortedUrl';
 
 const ApiUrl = 'https://shorturl9.p.rapidapi.com/functions/api.php';
 
-const Shorten = ({setUrls, formData, setFormData}) => {  // propsy
+const Shorten = ({setUrls, formData, setFormData}) => { 
   
-
-  
-
-  // useEffect(() => {
-    
-    
-  //   const fetchData = async () => {
-  //     try {
-  //       const data = await fetchFromApi(ApiUrl, formData.params);  // zapytanie do api 
-  //       setUrls((prev) => [
-  //         ...prev,
-  //         {
-  //           shortUrl: data.url,
-  //           oldUrl: formData.url
-  //         }
-  //       ]);
-  //     } catch (error) {
-  //       // Obsługa błędów połączenia z API
-  //       console.error(error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, [formData]);
-
-
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await fetchFromApi(ApiUrl, formData.params);  // zapytanie do api 
-  
-        console.log(data.url); // Sprawdzenie wartości url (opcjonalne)
+        const data = await fetchFromApi(ApiUrl, formData.params); 
         setUrls((prev) => [
           ...prev,
           {
@@ -46,7 +18,6 @@ const Shorten = ({setUrls, formData, setFormData}) => {  // propsy
           }
         ]);
       } catch (error) {
-        // Obsługa błędów połączenia z API
         console.error(error);
       }
     };
@@ -59,7 +30,7 @@ const Shorten = ({setUrls, formData, setFormData}) => {  // propsy
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormData((prev) => ({  // ustawienie danych z formularza
+    setFormData((prev) => ({ 
       ...prev,
       url: prev.value, 
       params: {
@@ -67,23 +38,6 @@ const Shorten = ({setUrls, formData, setFormData}) => {  // propsy
         body: new URLSearchParams({ url: prev.value })
       }
     }))
-
-    // try {
-    //   const data = await fetchFromApi(ApiUrl, formData.params)  // zapytanie do api 
-
-    //   console.log(data.url) // pusta wartość
-    //   setUrls((prev) => [
-    //     ...prev,
-    //     {
-    //       shortUrl: data.url, // inicjaluzuje undefined
-    //       oldUrl: formData.url // inicjalizuje ''  
-    //     }
-    //   ]);
-    // } catch (error) {
-    //   // Obsługa błędów połączenia z API
-    //   console.error(error);
-    // }
-
   };
 
   return (

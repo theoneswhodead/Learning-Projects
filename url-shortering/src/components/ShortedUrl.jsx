@@ -27,4 +27,3 @@ const ShortedUrl = ({url, short}) => {
 }
 
 export default ShortedUrl
-//px-[128px] py-[16px] bg-cyan rounded-md

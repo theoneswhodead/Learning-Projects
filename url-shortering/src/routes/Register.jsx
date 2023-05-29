@@ -1,11 +1,15 @@
 import React from 'react'
+ 
+import { Boost, Footer, Register } from '../containers'
 
-const Register = () => {
+const Home = () => {
   return (
     <div>
-      
+      <Register />
+      <Boost />
+      <Footer />
     </div>
   )
 }
 
-export default Register
+export default Home

@@ -14,6 +14,7 @@ module.exports = {
         dark_blue: 'hsl(255, 11%, 22%)',
         dark_violet: 'hsl(260, 8%, 14%)',
         background: '#F0F1F6',
+        footer: '#232027',
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
