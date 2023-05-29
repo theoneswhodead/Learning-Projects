@@ -5,18 +5,23 @@ import { Shorten, ShortedUrl } from '../components'
 
 const Statistics = () => {
     const [formData, setFormData] = useState({
-        value: '',
-        url: '',
-        params: { ...options, body: new URLSearchParams({ url: '' }) }
+        value: '', // value inputa, też url
+        url: '', // url podany
+        params: { ...options, body: new URLSearchParams({ url: '' }) } // wartość '' dla url
       });
-    const [urls, setUrls] = useState([]);
+
+
+    const [urls, setUrls] = useState([]); // inicjalizacja tablicą
+
       console.log(urls)
+
+      console.log(formData)
   return (
     <div className='bg-background'>
     
-      <Shorten urls={urls} setUrls={setUrls} formData={formData} setFormData={setFormData}/>
+      <Shorten setUrls={setUrls} formData={formData} setFormData={setFormData}/>
 
-      {urls.length === 0 ? ('') : urls.map((ur, index) => (
+      {urls.shortUrl === '' ? ('') : urls.map((ur, index) => (
         <ShortedUrl key={index} url={ur.oldUrl} short={ur.shortUrl} />
       ))}
 

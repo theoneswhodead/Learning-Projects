@@ -11,7 +11,7 @@ const Header = () => {
         <h1 className='text-[2rem] lg:text-[58px] font-bold leading-10 lg:leading-snug'>More than just shorter links</h1>
         <p className='text-[15px] lg:text-[17px] text-gray'>Build your brand’s recognition and get detailed insights 
   on how your links are performing.</p>
-        <button type="button" className='px-[40px] py-[20px] bg-cyan rounded-full text-white font-bold text-[18px] tracking-wider'>Get Started</button>
+        <button type="button" className='px-[40px] py-[20px] bg-cyan rounded-full text-white font-bold text-[18px] tracking-wider hover:bg-cyan_hover'>Get Started</button>
       </div>
     </div>
   )

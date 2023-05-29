@@ -29,7 +29,8 @@ router.get('', async (req,res) => {
             locals,
              data,
              current: page, 
-             nextPage: hasNextPage ? nextPage : null
+             nextPage: hasNextPage ? nextPage : null,
+             currentRoute: '/'
          });
 
             
@@ -48,10 +49,11 @@ router.get('/post/:id', async (req, res) => {
 
         const locals = {
             title: data.title,
-            description: "Simple nodejs blog"
+            description: "Simple nodejs blog",
+            currentRoute: `/post/${slug}`
         }
 
-        res.render('post', { locals, data })
+        res.render('post', { locals, data, currentRoute })
     } catch(error) {
         console.log(error)
     }
@@ -63,7 +65,7 @@ router.post('/search', async (req, res) => {
         
         const locals = {
             title: "Search",
-            description: "Simple nodejs blog"
+            description: "Simple nodejs blog", currentRoute: `/search`
         }
 
         let searchTerm = req.body.searchTerm;
@@ -76,7 +78,7 @@ router.post('/search', async (req, res) => {
             ]
         })
         res.render("search", {
-            data, locals
+            data, locals, currentRoute
         })
     } catch(error) {
         console.log(error)

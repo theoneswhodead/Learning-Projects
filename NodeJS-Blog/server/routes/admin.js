@@ -83,10 +83,11 @@ router.get('/dashboard', authMiddleware, async (req, res) => {
         const data = await Post.find();
         res.render('admin/dashboard', {
             locals,
-            data
+            data,
+            layout: adminLayout
         });
     } catch (error) {
-
+        console.log(error)
     }
 })
 // create new post
@@ -103,12 +104,93 @@ router.get('/add-post', authMiddleware, async (req, res) => {
         const data = await Post.find();
         res.render('admin/add-post', {
             locals,
-            data
+            layout: adminLayout,
         });
     } catch (error) {
-
+        console.log(error)
     }
 })
+
+// POST
+
+router.post('/add-post', authMiddleware, async (req, res) => {
+
+    try{
+        try {
+            const newPost = new Post({
+               title:  req.body.title,
+               body:  req.body.body
+            })
+
+            await Post.create(newPost);
+
+        } catch (error) {
+            console.log(error)
+        }
+        res.redirect('/dashboard');
+      
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+//edit post
+
+router.get('/edit-post/:id', authMiddleware, async (req, res) => {
+
+    try{
+
+        const locals = {
+            title: 'Add Post',
+             description: 'dASHBOARD TEST edit post'
+        }
+
+        const data = await Post.findOne({ _id: req.params.id })
+        
+        res.render('admin/edit-post', {
+            locals,
+            data,
+            layout: adminLayout
+        })
+     
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+
+//edit post
+
+router.put('/edit-post/:id', authMiddleware, async (req, res) => {
+
+    try{
+        
+        await Post.findByIdAndUpdate(req.params.id, {
+            title: req.body.title,
+            body: req.body.body,
+            updatedAt: Date.now()
+        })
+        res.redirect('/edit-post/${req.params.id}')
+     
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+
+//delete post
+
+router.delete('/delete-post', authMiddleware, async (req, res) => {
+
+    try{
+
+      await Post.deleteOne({ _id: req.params.id })
+      res.redirect('/dashboard');
+    } catch (error) {
+        console.log(error)
+    }
+})
+
 
 
 
@@ -137,7 +219,13 @@ router.post('/register', async (req,res) => {
     }   
 })
 
+// admin logout
 
+router.get('/logout', (req, res) => {
+    res.clearCookie('token');
+   // res.json({message: 'Logout successgul'})
+    res.redirect('/');
+})
 
 
 module.exports = router;

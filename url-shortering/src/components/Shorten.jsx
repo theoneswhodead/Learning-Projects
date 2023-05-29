@@ -4,17 +4,40 @@ import ShortedUrl from './ShortedUrl';
 
 const ApiUrl = 'https://shorturl9.p.rapidapi.com/functions/api.php';
 
-const Shorten = ({setUrls, formData, setFormData}) => {
+const Shorten = ({setUrls, formData, setFormData}) => {  // propsy
   
 
   
+
+  // useEffect(() => {
+    
+    
+  //   const fetchData = async () => {
+  //     try {
+  //       const data = await fetchFromApi(ApiUrl, formData.params);  // zapytanie do api 
+  //       setUrls((prev) => [
+  //         ...prev,
+  //         {
+  //           shortUrl: data.url,
+  //           oldUrl: formData.url
+  //         }
+  //       ]);
+  //     } catch (error) {
+  //       // Obsługa błędów połączenia z API
+  //       console.error(error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, [formData]);
+
 
   useEffect(() => {
-    
-    
     const fetchData = async () => {
       try {
-        const data = await fetchFromApi(ApiUrl, formData.params);
+        const data = await fetchFromApi(ApiUrl, formData.params);  // zapytanie do api 
+  
+        console.log(data.url); // Sprawdzenie wartości url (opcjonalne)
         setUrls((prev) => [
           ...prev,
           {
@@ -27,20 +50,40 @@ const Shorten = ({setUrls, formData, setFormData}) => {
         console.error(error);
       }
     };
+  
+    if (formData.url !== '') {
+      fetchData();
+    }
+  }, [formData.url]);
 
-    fetchData();
-  }, [formData]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormData((prev) => ({
+    setFormData((prev) => ({  // ustawienie danych z formularza
       ...prev,
-      url: prev.value, //bug
+      url: prev.value, 
       params: {
         ...prev.params,
-        body: new URLSearchParams({ url: prev.url })
+        body: new URLSearchParams({ url: prev.value })
       }
-    }));
+    }))
+
+    // try {
+    //   const data = await fetchFromApi(ApiUrl, formData.params)  // zapytanie do api 
+
+    //   console.log(data.url) // pusta wartość
+    //   setUrls((prev) => [
+    //     ...prev,
+    //     {
+    //       shortUrl: data.url, // inicjaluzuje undefined
+    //       oldUrl: formData.url // inicjalizuje ''  
+    //     }
+    //   ]);
+    // } catch (error) {
+    //   // Obsługa błędów połączenia z API
+    //   console.error(error);
+    // }
+
   };
 
   return (
@@ -52,9 +95,9 @@ const Shorten = ({setUrls, formData, setFormData}) => {
           placeholder='Shorten a link here...'
           onChange={(e) => setFormData((prev) => ({ ...prev, value: e.target.value }))}
           required
-          className='py-4 pl-[1rem] rounded-md lg:w-full'
+          className='py-4 pl-[1rem] rounded-md lg:w-full  truncate'
         />
-        <button type='submit' className='lg:w-[190px] px-[92px] lg:px-[42px] py-4 bg-cyan text-white font-bold rounded-md'>
+        <button type='submit' className='lg:w-[190px] px-[92px] lg:px-[42px] py-4 bg-cyan text-white font-bold rounded-md hover:bg-cyan_hover'>
           Shorten It!
         </button>
       </form>

@@ -12,7 +12,9 @@ const Demo = () => {
 
     const [allArticles, setAllArticles] = useState([]);
 
-    const [getSummary, { error, isFerching }] = useLazyGetSummaryQuery();
+    const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
+
+    const [copied, setCopied] = useState("")
 
     useEffect(() => {
       const articlesFromLocaleStorage = JSON.parse(
@@ -46,6 +48,15 @@ const Demo = () => {
     };
 
 console.log(allArticles)
+
+
+const handleCopy = (copyUrl) => {
+  setCopied(copyUrl);
+  navigator.clipboard.writeText(copyUrl);
+  setTimeout(() => setCopied(false), 3000)
+} 
+
+
   return (
     <section className='mt-16 w-full max-w-xl'>
       {/* {search} */}
@@ -81,8 +92,8 @@ console.log(allArticles)
                 onClick={() => setArticle(item)}
                 className="link_card"
               >
-                <div className='copy_btn'>
-                  <img src={copy} alt="copy_icon" className='w-[40%] h-[40%] object-contain'/>
+                <div className='copy_btn' onClick={() => handleCopy(item.url)}>
+                  <img src={copied === item.url ? tick : copy} alt="copy_icon" className='w-[40%] h-[40%] object-contain'/>
                 </div>
                 <p className='flex-1 font-satoshi text-blue-700 font-medium text-sm truncate'>
                   {item.url}
@@ -96,7 +107,7 @@ console.log(allArticles)
       {/* {Display Results} */}
       <div className='my-10 max-w-full flex justify-center items-center'>
           {
-            isFerching ? (
+            isFetching ? (
               <img src={loader} alt="loader" className='w-10 h-10 object-contain'
               /> 
             ): error ? (
@@ -108,7 +119,12 @@ console.log(allArticles)
             ) : (
               article.summary && (
                 <div className='flex flex-col gap-3'>
-                
+                  <h2 className='font-shatoshi font-bold font-gray-600 text-xl'>
+                    Article <span className='blue_gradient'>Summary</span>
+                  </h2>
+                  <div className='summary_box'>
+                    <p className='gont-inter font-medium text-sm text-gray-700'>{article.summary}</p>
+                  </div>
                 </div>
               )
             )}

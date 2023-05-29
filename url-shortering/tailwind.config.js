@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
         cyan: "hsl(180, 66%, 49%)",
+        cyan_hover: "#9BE3E2",
         violet: 'hsl(257, 27%, 26%)',
         red: "hsl(0, 87%, 67%)",
         gray: "hsl(0, 0%, 75%)",

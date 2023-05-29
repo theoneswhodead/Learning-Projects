@@ -1,13 +1,18 @@
 import React from 'react'
 
-import { Tech } from '../components'
 
-const FilterBat = () => {
+
+const FilterBat = ({keywords}) => {
   return (
     <div className='bg-white p-4'>
 
-      <Tech />
-      <button type="button" className=' text-grayish_cyan'>clear</button>
+      {
+        keywords.map((key, index) => {
+          return (
+            <button key={index} className='bg-background text-dark_cyan p-[10px] text-[12px] font-bold rounded-md'>{key}</button>
+          )
+        })
+      }
 
       
     </div>

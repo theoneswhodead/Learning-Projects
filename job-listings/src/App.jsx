@@ -6,21 +6,36 @@ import data from '../data.json'
 
 const App = () => {
 
-  const [isActive, setIsActive] = useState(false);
+//  const [isActive, setIsActive] = useState(false);
+
+const [filterKeywords, setFilterKeywords] = useState([])
+
+const addFilterKeywords = (data) => {
+  if(!filterKeywords.includes(data)) {
+      setFilterKeywords([...filterKeywords, data])
+  }
+}
 
   return (
     <div className='bg-background ' >
       <div className='bg-[url("./images/bg-header-mobile.svg")] bg-center bg-cover sm:bg-[url("./images/bg-header-desktop.svg")] h-[175px] bg-dark_cyan'>
       </div>
-        {
+        {/* {
           isActive &&
           <FilterBar isActive={isActive}/>
-        }
+        } */}
 
         {
-        data.map((offer) => {
+          filterKeywords.length > 0 && <FilterBar keywords={filterKeywords}/>
+        }
+
+
+
+
+        {
+        data.map((offer, index) => {
           return (
-            <JobItem key={offer.id} data={offer} setIsActive={setIsActive}/>
+            <JobItem key={index} data={offer} setKeywords={addFilterKeywords}/>
           )
         })
         }
