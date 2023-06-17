@@ -19,6 +19,7 @@ const Hero = () => {
     const submitHandler = async (e) => {
       e.preventDefault();
       const WordUrl = `${url}${word}`;
+      
       if(word !== '') {
         try {
           const result = await fetchData(WordUrl)
@@ -69,7 +70,8 @@ const Hero = () => {
       </div>
       
 
-      {data.meaning.map((meaning, index) => (
+      {
+        data && data.meaning.map((meaning, index) => (
         <div key={index} className='mx-[24px]'>
           <h2 className='font-bold text-[18px] my-[2rem]'>{meaning.tag}</h2>
           <ol className='list-disc list-violet'>
@@ -78,7 +80,8 @@ const Hero = () => {
             ))}
           </ol>
         </div>
-      ))}
+      ))
+      }
     </div>
   ) : null
 }     
