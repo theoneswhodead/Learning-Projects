@@ -1,5 +1,7 @@
-import Planet from "./planet";
+import Planet from "./Planet";
+import Error from "./Error";
 
 export {
     Planet,
+    Error,
 }

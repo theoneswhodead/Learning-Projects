@@ -3,8 +3,6 @@ import { NavLink, useLocation } from 'react-router-dom'
 
 const PlanetMenu = () => {
     const location = useLocation();
-    
-   // console.log(location)
     return (
         <div className='font-spartan text-white font-bold uppercase tracking-[1.93px] leading-[10px] text-[9px]  flex justify-between px-6 py-[20px] border-b-[1px] border-white_opacity sm:hidden'>
 

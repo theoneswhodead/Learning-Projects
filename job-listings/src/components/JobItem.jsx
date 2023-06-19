@@ -70,7 +70,7 @@ const JobItem = (props) => {
 
           {
             keywords.map((key, index) => (
-              <button onClick={() => props.setFilterKeywords(key)} key={index} className='bg-background text-dark_cyan p-[10px] text-[12px] font-bold rounded-md'>{key}</button>
+              <button onClick={() => props.setKeywords(key)} key={index} className='bg-background text-dark_cyan p-[10px] text-[12px] font-bold rounded-md'>{key}</button>
             ))
           }
 

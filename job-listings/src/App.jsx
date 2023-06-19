@@ -16,6 +16,15 @@ const addFilterKeywords = (data) => {
   }
 }
 
+const deleteKeyword = (data) => {
+  const newKeywords = filterKeywords.filter(key => key != data);
+  setFilterKeywords(newKeywords);
+}
+
+const clearKeywords = () => {
+  setFilterKeywords([]);
+}
+
   return (
     <div className='bg-background ' >
       <div className='bg-[url("./images/bg-header-mobile.svg")] bg-center bg-cover sm:bg-[url("./images/bg-header-desktop.svg")] h-[175px] bg-dark_cyan'>
@@ -26,7 +35,7 @@ const addFilterKeywords = (data) => {
         } */}
 
         {
-          filterKeywords.length > 0 && <FilterBar keywords={filterKeywords}/>
+          filterKeywords.length > 0 && <FilterBar keywords={filterKeywords} removeKeywords={deleteKeyword} clearKeywords={clearKeywords}/>
         }
 
 

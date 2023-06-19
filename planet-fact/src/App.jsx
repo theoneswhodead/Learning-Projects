@@ -2,7 +2,8 @@ import React from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import { RootLayout, PlanetLayout } from './layouts'
-import  { Planet } from './containers'
+import  { Planet, Error } from './containers'
+
 
 const router = createBrowserRouter([
   {
@@ -192,6 +193,10 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: '*',
+    element: <Error />
+  }
 ])
 
 
