@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+
+}
+
+div {
+    height: 100vh;
+    width: 100%;
+
+}
+
+.as {
+    background-color: #000000;
+}
+
+.a {
+    background: #000000 ;
+}
+
+.b {
+    background: #000080;
+}
+
+.c {
+    background: #800080;
+}
+
+.d{
+    background:  #800000 ;
+}
+
+.e {
+    background: #404040 ;
+}
+
+.f {
+    background: #800020 ;
+} 
+
+
+
+.g {
+    background: #808000;
+}
+
+.h {
+    background: #C0C0C0;
+}
+
+.i {
+    background: #0000FF;
+}
+
+.j {
+    background: #FFFF99;
+}
+
+.k {
+    background: #FFFFCC;
+}   
+
+.l {
+    background:#3A4C63 ;
+}
+
+.m {
+    background: #800080;
+}
+
+.n {
+    background: #D2B48C;
+}
